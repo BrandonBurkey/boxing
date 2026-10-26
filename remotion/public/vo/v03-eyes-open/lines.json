@@ -1,0 +1,74 @@
+{
+ "voice": "am_michael",
+ "speed": 1.1,
+ "lines": [
+  {
+   "id": "b01",
+   "text": "Flinching doesn't get you hit."
+  },
+  {
+   "id": "b02",
+   "text": "Looking away does."
+  },
+  {
+   "id": "b03",
+   "text": "A punch comes. You turn your head."
+  },
+  {
+   "id": "b04",
+   "text": "Eyes shut. Hands up. Hoping."
+  },
+  {
+   "id": "b05",
+   "text": "Now you can't see the next one."
+  },
+  {
+   "id": "b06",
+   "text": "Punches come in combinations."
+  },
+  {
+   "id": "b07",
+   "text": "The first one makes you look away."
+  },
+  {
+   "id": "b08",
+   "text": "The second one lands."
+  },
+  {
+   "id": "b09",
+   "text": "Canelo Álvarez is famous for his head movement."
+  },
+  {
+   "id": "b10",
+   "text": "He moves his head inches, just off the line of the punch."
+  },
+  {
+   "id": "b11",
+   "text": "Just enough to miss. Close enough to counter."
+  },
+  {
+   "id": "b12",
+   "text": "Keeping your eyes open is a reflex you can build, the app I'm building has a reaction drill for exactly this, and here's the rule."
+  },
+  {
+   "id": "b13",
+   "text": "Watch his chest, not his gloves."
+  },
+  {
+   "id": "b14",
+   "text": "Bend your knees to slip. Don't turn away."
+  },
+  {
+   "id": "b15",
+   "text": "Small move. Eyes open. Punch back."
+  },
+  {
+   "id": "b16",
+   "text": "You can't slip"
+  },
+  {
+   "id": "b17",
+   "text": "what you can't see."
+  }
+ ]
+}

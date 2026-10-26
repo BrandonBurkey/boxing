@@ -1,0 +1,86 @@
+{
+ "voice": "am_michael",
+ "speed": 1.1,
+ "lines": [
+  {
+   "id": "b01",
+   "text": "Short arms don't lose fights."
+  },
+  {
+   "id": "b02",
+   "text": "Standing at his distance does."
+  },
+  {
+   "id": "b03",
+   "text": "Every tall fighter has one perfect distance."
+  },
+  {
+   "id": "b04",
+   "text": "Right at the end of his jab."
+  },
+  {
+   "id": "b05",
+   "text": "His punches land there. Yours fall short."
+  },
+  {
+   "id": "b06",
+   "text": "And that's exactly where you stand."
+  },
+  {
+   "id": "b07",
+   "text": "You wait there, looking for a gap."
+  },
+  {
+   "id": "b08",
+   "text": "He jabs. You reach. You miss."
+  },
+  {
+   "id": "b09",
+   "text": "Every second there costs you."
+  },
+  {
+   "id": "b10",
+   "text": "Mike Tyson was five foot ten."
+  },
+  {
+   "id": "b11",
+   "text": "He won the heavyweight title at twenty, against a man four inches taller."
+  },
+  {
+   "id": "b12",
+   "text": "He didn't hang around at the end of the jab."
+  },
+  {
+   "id": "b13",
+   "text": "Head moving, he'd slip, step, and arrive."
+  },
+  {
+   "id": "b14",
+   "text": "Up close, where long arms have no room to punch."
+  },
+  {
+   "id": "b15",
+   "text": "Getting inside is a skill you drill, the app I'm building trains you to do exactly that, and it starts with your head."
+  },
+  {
+   "id": "b16",
+   "text": "Don't walk in straight. Move your head as you step."
+  },
+  {
+   "id": "b17",
+   "text": "Cross the gap in one go. Never stop halfway."
+  },
+  {
+   "id": "b18",
+   "text": "Then stay close and work the body."
+  },
+  {
+   "id": "b19",
+   "text": "Be far, or be close."
+  },
+  {
+   "id": "b20",
+   "text": "Never in between."
+  }
+ ]
+}

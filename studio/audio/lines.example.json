@@ -1,0 +1,9 @@
+{
+  "voice": "am_michael",
+  "speed": 1.1,
+  "lines": [
+    {"id": "l01", "text": "Short arms don't lose fights. Standing at his distance does."},
+    {"id": "l02", "text": "Step in behind the jab, and make him punch down at you."},
+    {"id": "l03", "text": "Now his reach is a problem. For him."}
+  ]
+}

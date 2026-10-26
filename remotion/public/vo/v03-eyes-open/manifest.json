@@ -1,0 +1,93 @@
+{
+  "voice": "am_michael",
+  "speed": 1.1,
+  "sample_rate": 24000,
+  "lufs": -16.0,
+  "lines": [
+    {
+      "id": "b01",
+      "file": "b01.wav",
+      "duration": 1.44
+    },
+    {
+      "id": "b02",
+      "file": "b02.wav",
+      "duration": 1.12
+    },
+    {
+      "id": "b03",
+      "file": "b03.wav",
+      "duration": 1.74
+    },
+    {
+      "id": "b04",
+      "file": "b04.wav",
+      "duration": 1.71
+    },
+    {
+      "id": "b05",
+      "file": "b05.wav",
+      "duration": 1.63
+    },
+    {
+      "id": "b06",
+      "file": "b06.wav",
+      "duration": 1.64
+    },
+    {
+      "id": "b07",
+      "file": "b07.wav",
+      "duration": 1.71
+    },
+    {
+      "id": "b08",
+      "file": "b08.wav",
+      "duration": 1.17
+    },
+    {
+      "id": "b09",
+      "file": "b09.wav",
+      "duration": 3.0
+    },
+    {
+      "id": "b10",
+      "file": "b10.wav",
+      "duration": 3.18
+    },
+    {
+      "id": "b11",
+      "file": "b11.wav",
+      "duration": 2.52
+    },
+    {
+      "id": "b12",
+      "file": "b12.wav",
+      "duration": 8.12
+    },
+    {
+      "id": "b13",
+      "file": "b13.wav",
+      "duration": 1.93
+    },
+    {
+      "id": "b14",
+      "file": "b14.wav",
+      "duration": 2.34
+    },
+    {
+      "id": "b15",
+      "file": "b15.wav",
+      "duration": 2.38
+    },
+    {
+      "id": "b16",
+      "file": "b16.wav",
+      "duration": 0.9
+    },
+    {
+      "id": "b17",
+      "file": "b17.wav",
+      "duration": 1.02
+    }
+  ]
+}
