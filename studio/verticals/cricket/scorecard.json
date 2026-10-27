@@ -1,0 +1,16 @@
+{
+  "sport": "cricket",
+  "verdict": "MAYBE",
+  "saturation": "OPEN",
+  "scores": {"demand": 3, "format_gap": 4, "geometry_fit": 3, "name_pull": 4, "wtp": 2, "reuse": 2, "risk": 4},
+  "total": 63,
+  "strongest_incumbent": {"handle": "@cricket_mentoring", "followers": 219779, "source": "https://www.tiktok.com/@cricket_mentoring (plain curl, webapp.user-detail, 2026-10-27): 3,167,578 likes, 1,084 videos, sells online coaching; adjacent (coach-led), not an animated faceless account. Saturation is low-confidence: the cricket mechanic web searches were not run because the shared search budget ran out."},
+  "best_hooks": [
+    "Losing pace isn't weak arms. It's a collapsing front knee. (Jasprit Bumrah, front-knee angle, no ball needed)",
+    "Getting bowled isn't the ball. It's your head falling over. (Joe Root, head line over front foot)",
+    "Pace doesn't beat you. Reaching for the ball does. (Virat Kohli, playing-late timing bar)"
+  ],
+  "props_needed": ["bat with two-hand grip IK", "ball with bounce/swing/spin path lines", "stumps and bails", "crease lines and pitch strip", "pads, helmet, gloves", "bowling action pose set", "top-down pitch map"],
+  "handles_free": ["@playinglate", "@offstumplab", "@creasetheory"],
+  "one_line_case": "No animated cricket technique account found and coach-led tips reach 220k, but India is off TikTok, most lessons need ball physics, and saturation still needs proper mechanic searches before this can move past MAYBE."
+}

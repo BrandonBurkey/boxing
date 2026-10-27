@@ -1,0 +1,16 @@
+{
+  "sport": "rugby",
+  "verdict": "MAYBE",
+  "saturation": "CONTESTED",
+  "scores": {"demand": 3, "format_gap": 4, "geometry_fit": 3, "name_pull": 3, "wtp": 2, "reuse": 3, "risk": 2},
+  "total": 59,
+  "strongest_incumbent": {"handle": "@rugbyeverest", "followers": 4382, "source": "https://www.tiktok.com/@rugbyeverest (plain curl, webapp.user-detail, 2026-10-27): 77,586 likes, 161 videos, bio plugs a playbook app. Largest adjacent tips account: @rugbybricks 201,916 followers (live footage, not animated)."},
+  "best_hooks": [
+    "Slow feet don't get you caught. Running straight at him does. (Cheslin Kolbe, top-down step angle)",
+    "Being small doesn't get you smashed. Arriving upright does. (Antoine Dupont, hip-height line)",
+    "Lomu didn't beat England on speed. He beat them on the angle. (Jonah Lomu, top-down running lines)"
+  ],
+  "props_needed": ["oval ball", "pitch lines (try line, 22, 10m, touch)", "body-on-body contact rig", "ruck pile 3-4 bodies", "tackle bag", "top-down defensive line view"],
+  "handles_free": ["@gainlineiq", "@rucktheory", "@trylines"],
+  "one_line_case": "A real but narrow gap: the only animated-plus-app rugby account is a 4.4k tactics board, and live-footage tips accounts reach 202k. Low willingness to pay and tackle-safety liability cap it at MAYBE, so lead with stepping and carry height, not tackling."
+}

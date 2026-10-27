@@ -1,0 +1,62 @@
+{
+ "sport": "tennis",
+ "verdict": "GO",
+ "saturation": "CONTESTED",
+ "scores": {
+  "demand": 4,
+  "format_gap": 3,
+  "geometry_fit": 4,
+  "name_pull": 5,
+  "wtp": 4,
+  "reuse": 3,
+  "risk": 4
+ },
+ "total": 76,
+ "strongest_incumbent": {
+  "handle": "@tennis.geometry",
+  "followers": 4267,
+  "source": "https://www.tiktok.com/@tennis.geometry (plain curl, webapp.user-detail, 2026-10-27)"
+ },
+ "best_hooks": [
+  "Slow feet don't lose you the rally. Landing your split step late does. (Djokovic, timing bar)",
+  "Short arms don't make you late. Hitting beside your body instead of in front does. (Alcaraz, top-down contact zone)",
+  "A weak serve doesn't lose you service games. Tossing it behind your head does. (Federer, toss line)"
+ ],
+ "props_needed": [
+  "racket",
+  "ball",
+  "toss arc",
+  "net",
+  "court lines",
+  "overhead serve poses",
+  "split-step pose",
+  "top-down court view"
+ ],
+ "handles_free": [
+  "splitsteplab",
+  "contactpointlab",
+  "serveblueprint"
+ ],
+ "one_line_case": "Best star names and richest amateurs of the three; only sub-5k animated/angle incumbents, so enter before the 'geometry' network scales tennis.",
+ "geometry_operator_check": {
+  "date": "2026-10-27",
+  "method": "plain curl of tiktok.com/@<sport>.geometry, control @zzqxnotreal8812=10221",
+  "tennis.geometry": [
+   4267,
+   28
+  ],
+  "padel.geometry": [
+   2948,
+   38
+  ],
+  "golf.geometry": [
+   678,
+   30
+  ],
+  "running.geometry": [
+   0,
+   3
+  ],
+  "note": "Same bio pattern ('<Sport>, explained with angles', 'One fix a day') → likely one operator expanding sport by sport. [verified-fetch] [followers, videos]"
+ }
+}

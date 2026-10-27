@@ -1,0 +1,8 @@
+{"sport":"badminton","verdict":"MAYBE","saturation":"OPEN",
+ "scores":{"demand":4,"format_gap":4,"geometry_fit":4,"name_pull":3,"wtp":3,"reuse":3,"risk":5},
+ "total":75,
+ "strongest_incumbent":{"handle":"@badmintonfamly (live-action, plugs paid app)","followers":72782,"source":"https://www.tiktok.com/@badmintonfamly"},
+ "best_hooks":["Slow feet don't lose rallies. Not returning to base does.","Weak arms don't kill your smash. Contacting the shuttle behind your head does.","Being short doesn't lose the net. Lunging with the wrong foot does."],
+ "props_needed":["racket one-hand attachment","shuttle simple trajectory","net","court lines top-down with six-corner markers","lunge and scissor-jump poses"],
+ "handles_free":["shuttleangle","smashgeometry","badminton.geometry"],
+ "one_line_case":"Best engine fit of the four (footwork is top-down geometry), with WTP proven by Badminton Famly at $60-120/yr; no animated incumbent found, but check TikTok in-app search by hand before calling it GO."}

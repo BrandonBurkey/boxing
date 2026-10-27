@@ -1,0 +1,8 @@
+{"sport":"ice-hockey","verdict":"MAYBE","saturation":"OPEN",
+ "scores":{"demand":4,"format_gap":4,"geometry_fit":3,"name_pull":4,"wtp":4,"reuse":2,"risk":4},
+ "total":73,
+ "strongest_incumbent":{"handle":"@alwayshockey (live-action; @coachjeremy 963,436 sells training)","followers":1203217,"source":"https://www.tiktok.com/@alwayshockey"},
+ "best_hooks":["Short legs don't make you slow. A stride that pushes back instead of out does.","Gretzky wasn't the fastest. He stood where the puck was going.","Crossovers aren't for turning. They're for speed."],
+ "props_needed":["skates with glide locomotion cycle","stick two-hand IK","puck","rink lines and boards top-down","goal net"],
+ "handles_free":["stridegeometry","hockeyangles","edgeiq.hockey"],
+ "one_line_case":"Biggest verified tips audience of the four (three accounts near 1M, all live-action) with strong star names, but skating and stick rigs make it the most expensive engine port."}

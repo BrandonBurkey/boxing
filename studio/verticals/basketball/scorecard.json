@@ -1,0 +1,16 @@
+{
+  "sport": "basketball",
+  "verdict": "GO",
+  "saturation": "OPEN",
+  "scores": {"demand": 5, "format_gap": 4, "geometry_fit": 3, "name_pull": 5, "wtp": 3, "reuse": 3, "risk": 4},
+  "total": 78,
+  "strongest_incumbent": {"handle": "@hoopanimations", "followers": 45, "source": "https://www.tiktok.com/@hoopanimations (plain curl, 2026-10-27). Adjacent real-footage threat: @dribble2much, 210510 followers, plugs a training app."},
+  "best_hooks": [
+    "Slow feet don't get you blown by. Square hips do. (Jrue Holiday, top-down hip angle)",
+    "Length doesn't block your layup. Finishing on his side of the rim does. (Wembanyama, reach-radius circle)",
+    "Being short doesn't get your jumper blocked. Shooting it in front of your face does. (Steph Curry, release-point line)"
+  ],
+  "props_needed": ["basketball (held, shot arc, dribble bounce)", "hoop: rim, backboard, net", "half-court markings for top-down view", "poses: triple threat, defensive stance, shooting set-point, layup gather, low dribble, closeout, box-out", "reach-radius circle and hip-angle line devices"],
+  "handles_free": ["@hoopgeometry", "@hoopgeometryapp", "@releasepointhoops", "@releasepointapp", "@courtlineshoops"],
+  "one_line_case": "Biggest demand and star power of any sport, and no faceless animated technique account above 138 followers found; GO once a 15-minute in-app TikTok search confirms OPEN, positioning the app on defence/footwork geometry rather than HomeCourt's camera shot-tracking."
+}

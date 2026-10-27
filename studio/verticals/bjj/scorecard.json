@@ -1,0 +1,8 @@
+{"sport":"bjj","verdict":"MAYBE","saturation":"OPEN",
+ "scores":{"demand":4,"format_gap":4,"geometry_fit":3,"name_pull":3,"wtp":5,"reuse":2,"risk":3},
+ "total":72,
+ "strongest_incumbent":{"handle":"@meerkatsu (BJJ illustrator, timelapse drawings, not explainers)","followers":2112,"source":"https://www.tiktok.com/@meerkatsu [verified-fetch 2026-10-27]"},
+ "best_hooks":["Weak arms don't get you armbarred. Your elbow leaving your ribs does. (Roger Gracie)","Getting passed isn't speed. Your knee lining up with his hip is. (Marcelo Garcia)","Strong grips don't stop the back take. Turtling facing the wrong way does. (Gordon Ryan)"],
+ "props_needed":["mat","lying/seated/turtle/kneeling poses","leg-entanglement IK","two-body ground occlusion","top-down primary camera","optional gi"],
+ "handles_free":["@frametheoryapp","@frametheorybjj","@guardlineapp","@guardlinebjj","@matangles","@matanglesapp"],
+ "one_line_case":"Format gap open and highest willingness to pay (BJJ Fanatics 4,525 ratings, $38.99 instructionals), but the ground rig is the costliest build; enter after MMA."}

@@ -1,0 +1,8 @@
+{"sport":"volleyball","verdict":"MAYBE","saturation":"OPEN",
+ "scores":{"demand":4,"format_gap":4,"geometry_fit":3,"name_pull":2,"wtp":3,"reuse":3,"risk":3},
+ "total":66,
+ "strongest_incumbent":{"handle":"@coachchijo (live-action, not animated)","followers":427999,"source":"https://www.tiktok.com/@coachchijo"},
+ "best_hooks":["Short players don't get blocked. A late, flat approach does.","Weak arms don't shank passes. A platform pointed at the floor does.","Jumping higher won't fix your spike. Your last two steps will."],
+ "props_needed":["volleyball with arc","net and antenna","court lines top-down","jump/arm-swing poses","passing platform pose"],
+ "handles_free":["approachiq","spikeangle","vball.geometry"],
+ "one_line_case":"No animated volleyball technique account found and a big tip audience exists, but the audience skews young, name pull is weak and much of the technique is ball or team physics."}

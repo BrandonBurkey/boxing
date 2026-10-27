@@ -1,0 +1,16 @@
+{
+  "sport": "swimming",
+  "verdict": "MAYBE",
+  "saturation": "CONTESTED",
+  "scores": {"demand": 4, "format_gap": 3, "geometry_fit": 3, "name_pull": 4, "wtp": 4, "reuse": 3, "risk": 4},
+  "total": 71,
+  "strongest_incumbent": {"handle": "@umutswimlab (3D animated, Instagram; TikTok profile status 10202, not public)", "followers": 384423, "source": "https://hypeauditor.com/instagram/umutswimlab/ [snippet, fetch 403]; TikTok live-action leader @myswimpro 401,453 [verified-fetch]"},
+  "best_hooks": [
+    "Weak arms don't slow your freestyle. A dropped elbow does. (Phelps, elbow angle)",
+    "You're not out of breath. You're lifting your head to breathe. (Ledecky, head vs water line)",
+    "Phelps didn't swim even strokes. He galloped. (Phelps, left/right timing bars)"
+  ],
+  "props_needed": ["water surface line", "pool lane lines + wall (top-down)", "horizontal swimmer pose set", "body-roll faking", "underwater tint + bubbles", "breathing head-turn pose"],
+  "handles_free": ["@strokegeometry", "@swimangles", "@swimgeometry"],
+  "one_line_case": "Adults pay (MySwimPro) and Phelps/Ledecky pull, but a 3D animated technique account already has ~384k on Instagram and our flat side-view rig handles body roll and the underwater catch poorly."
+}

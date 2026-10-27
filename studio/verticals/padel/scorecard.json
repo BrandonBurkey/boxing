@@ -1,0 +1,63 @@
+{
+ "sport": "padel",
+ "verdict": "MAYBE",
+ "saturation": "CONTESTED",
+ "scores": {
+  "demand": 4,
+  "format_gap": 3,
+  "geometry_fit": 3,
+  "name_pull": 2,
+  "wtp": 3,
+  "reuse": 2,
+  "risk": 4
+ },
+ "total": 62,
+ "strongest_incumbent": {
+  "handle": "@padel.geometry",
+  "followers": 2948,
+  "source": "https://www.tiktok.com/@padel.geometry (plain curl, webapp.user-detail, 2026-10-27)"
+ },
+ "best_hooks": [
+  "Your partner doesn't leave the gap. You both standing still does. (Tapia & Coello, top-down rope)",
+  "Standing on the service line doesn't protect you. Standing two metres back does. (Galan, net distance)",
+  "Tennis players don't struggle in padel because of the racket. They struggle because they swing too big. (Andy Murray, swing arc)"
+ ],
+ "props_needed": [
+  "padel bat",
+  "ball",
+  "net",
+  "court lines",
+  "glass back/side walls + mesh",
+  "4 mannequins in 2 colourways",
+  "ball-off-wall bounce path",
+  "top-down court view",
+  "smash/bandeja/vibora poses"
+ ],
+ "handles_free": [
+  "padelblueprint",
+  "glassgamepadel",
+  "thewallplay"
+ ],
+ "one_line_case": "Fast-growing UK audience and no training app with traction, but weak star pull, a costly 4-body/wall engine and a small existing clone (@padel.geometry, 2.9k).",
+ "geometry_operator_check": {
+  "date": "2026-10-27",
+  "method": "plain curl of tiktok.com/@<sport>.geometry, control @zzqxnotreal8812=10221",
+  "tennis.geometry": [
+   4267,
+   28
+  ],
+  "padel.geometry": [
+   2948,
+   38
+  ],
+  "golf.geometry": [
+   678,
+   30
+  ],
+  "running.geometry": [
+   0,
+   3
+  ],
+  "note": "Same bio pattern ('<Sport>, explained with angles', 'One fix a day') → likely one operator expanding sport by sport. [verified-fetch] [followers, videos]"
+ }
+}

@@ -1,0 +1,64 @@
+{
+ "sport": "golf",
+ "verdict": "GO",
+ "saturation": "CONTESTED (early)",
+ "scores": {
+  "demand": 4,
+  "format_gap": 3,
+  "geometry_fit": 4,
+  "name_pull": 5,
+  "wtp": 5,
+  "reuse": 3,
+  "risk": 4
+ },
+ "total": 79,
+ "strongest_incumbent": {
+  "handle": "@golfanimated",
+  "followers": 1026,
+  "source": "https://www.tiktok.com/@golfanimated (plain curl, webapp.user-detail, 2026-10-27) [verified-fetch]; largest golf-tips account overall is live-action @rickshielspga at 544,501"
+ },
+ "best_hooks": [
+  "Moving your feet isn't a swing fault. Losing your balance is. (Scheffler; pressure arrow + timing bar)",
+  "Short golfers don't lose distance. A short arc does. (McIlroy; height labels + arc radius; facts to verify)",
+  "A flat swing isn't old-fashioned. It's how Hogan hit it straight. (Hogan pane of glass; plane line)"
+ ],
+ "props_needed": [
+  "golf club with two-hand IK grip",
+  "putter",
+  "ball",
+  "tee",
+  "hole and flag",
+  "target/alignment lines",
+  "top-down fairway/green tile",
+  "2D ball-flight tracer curve",
+  "down-the-line swing-plane overlay",
+  "golf poses: address, top, impact, finish"
+ ],
+ "handles_free": [
+  "@golfgeometry",
+  "@swingplanelab",
+  "@faceandpath"
+ ],
+ "one_line_case": "Big paying adult audience, star names, single-body geometry, and no credible faceless animated golf explainer found (largest is 1,026 followers); confirm with a manual in-app search and pick an app job that avoids Sportsbox/GolfFix swing analysis.",
+ "geometry_operator_check": {
+  "date": "2026-10-27",
+  "method": "plain curl of tiktok.com/@<sport>.geometry, control @zzqxnotreal8812=10221",
+  "tennis.geometry": [
+   4267,
+   28
+  ],
+  "padel.geometry": [
+   2948,
+   38
+  ],
+  "golf.geometry": [
+   678,
+   30
+  ],
+  "running.geometry": [
+   0,
+   3
+  ],
+  "note": "Same bio pattern ('<Sport>, explained with angles', 'One fix a day') → likely one operator expanding sport by sport. [verified-fetch] [followers, videos]"
+ }
+}

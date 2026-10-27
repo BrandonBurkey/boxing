@@ -1,0 +1,18 @@
+{
+  "sport": "football",
+  "verdict": "MAYBE",
+  "saturation": "CONTESTED",
+  "saturation_note": "Tactics/analysis animation SATURATED (@tifofootball_ 588,313). Animated faceless individual technique: no account found (search coverage of TikTok weak). Live-action technique coaches crowded (@the_jwl 208,791; @technefutbol 86,837 plugs a paid app).",
+  "scores": {"demand": 5, "format_gap": 3, "geometry_fit": 3, "name_pull": 5, "wtp": 3, "reuse": 2, "risk": 3},
+  "total": 70,
+  "strongest_incumbent": {"handle": "@tifofootball_", "followers": 588313, "source": "https://www.tiktok.com/@tifofootball_ (plain curl, webapp.user-detail, 2026-10-27)"},
+  "strongest_technique_incumbent": {"handle": "@the_jwl", "followers": 208791, "format": "live-action coach, not animated", "source": "https://www.tiktok.com/@the_jwl (plain curl, 2026-10-27)"},
+  "best_hooks": [
+    "Pace doesn't beat good defenders. Diving in does. (Van Dijk; distance line + wait timing bar)",
+    "Bad defenders aren't slow. They're square-on. (Van Dijk; 45-degree body angle, show-him-one-way arrow)",
+    "Being small doesn't get you dispossessed. Not looking before the ball arrives does. (Modric; shoulder-check timing bar + vision cone)"
+  ],
+  "props_needed": ["football with roll/stop/arc", "top-down pitch lines", "goal frame and net", "third mannequin (keeper/passer)", "vision-cone overlay", "kicking, receiving and jockeying poses", "cones"],
+  "handles_free": ["halfturnfc", "scanfirstfc", "openbodyfc"],
+  "one_line_case": "Nobody found animates individual football technique, and live coaches prove the tips-to-paid-app funnel (Techne $279.99/yr), but tactics animation is saturated next door, the engine port is the costliest yet, and a young audience complicates the waitlist."
+}

@@ -1,0 +1,20 @@
+{
+  "sport": "baseball",
+  "verdict": "MAYBE",
+  "saturation": "OPEN",
+  "scores": {"demand": 4, "format_gap": 3, "geometry_fit": 3, "name_pull": 4, "wtp": 4, "reuse": 3, "risk": 4},
+  "total": 71,
+  "strongest_incumbent": {
+    "handle": "@pitchingninja (real-footage teaching, not animated)",
+    "followers": 372619,
+    "source": "https://www.tiktok.com/@pitchingninja [verified-fetch 2026-10-27]"
+  },
+  "best_hooks": [
+    "Being 5'6\" doesn't kill your power. Swinging down on the ball does. (Jose Altuve)",
+    "Tall hitters don't have bigger holes. Bad posture does. (Aaron Judge, 6-7)",
+    "Weak arms don't lose velocity. Flying open early does. (Shohei Ohtani)"
+  ],
+  "props_needed": ["bat (exists)", "ball (exists)", "line/arrow (exist)", "home plate + strike-zone box", "mound + rubber", "glove", "top-down diamond", "batting and pitching-delivery poses", "hand/grip close-up rig", "softball windmill pose"],
+  "handles_free": ["@barrelpath", "@barrelpathapp", "@releasepointlab", "@launchanglelab", "@seamlinebaseball"],
+  "one_line_case": "Best paying audience of any team sport, with one-body geometry and Ohtani pull, but the format gap is unproven (only 3 of 8 searches ran) and funded tools own video analysis."
+}

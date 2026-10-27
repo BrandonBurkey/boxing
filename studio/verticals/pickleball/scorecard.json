@@ -1,0 +1,16 @@
+{
+  "sport": "pickleball",
+  "verdict": "MAYBE",
+  "saturation": "OPEN",
+  "scores": {"demand": 4, "format_gap": 4, "geometry_fit": 4, "name_pull": 2, "wtp": 3, "reuse": 3, "risk": 4},
+  "total": 71,
+  "strongest_incumbent": {"handle": "@tanner.pickleball (real footage, not animated; no animated TikTok incumbent found)", "followers": 77820, "source": "https://www.tiktok.com/@tanner.pickleball (plain curl, webapp.user-detail, 2026-10-27)"},
+  "best_hooks": [
+    "Soft hands don't win the dink battle. Dinking to the front of the kitchen loses it. (Ben Johns, top-down kitchen halves)",
+    "Kitchen faults aren't clumsy feet. Your momentum is. (Ben Johns, momentum arrow)",
+    "You're not too slow to reach the kitchen. You're rushing in and getting caught mid-court. (Anna Leigh Waters, transition-zone timing bar)"
+  ],
+  "props_needed": ["paddle", "perforated ball", "low net", "court lines with shaded kitchen", "top-down court view", "dink/ready/drop poses", "4 mannequins in 2 colourways", "short ball-arc helper"],
+  "handles_free": ["kitchenlinelab", "dinkblueprint", "pickleblueprint"],
+  "one_line_case": "Widest-open format gap of the three and 24.3M US players, but weak star pull; provisional OPEN pending 4+ more saturation queries."
+}

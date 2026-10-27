@@ -1,0 +1,8 @@
+{"sport":"wrestling","verdict":"NO","saturation":"OPEN",
+ "scores":{"demand":3,"format_gap":4,"geometry_fit":3,"name_pull":2,"wtp":2,"reuse":3,"risk":4},
+ "total":61,
+ "strongest_incumbent":{"handle":"none found (@wrestlinganimation exists but is empty)","followers":0,"source":"https://www.tiktok.com/@wrestlinganimation [verified-fetch 2026-10-27]"},
+ "best_hooks":["Being slow doesn't get your shot sprawled. Shooting from too far does. (Jordan Burroughs)","Your sprawl doesn't fail because it's slow. It fails because your hips stay above your knees. (Daniel Cormier)","Khabib doesn't take you down with power. He takes you down against the fence."],
+ "props_needed":["circular mat with circles","unbranded singlet/headgear","shot/level-change/sprawl/lift poses","2-body contact IK","kneeling/bottom poses"],
+ "handles_free":["@levelchangeapp","@sprawltheory","@sprawltheoryapp","@handfight","@handfightapp","@handfightwrestling"],
+ "one_line_case":"Open format and a 384k US high-school base, but a teen audience, weak name pull and no paid-app evidence; fold wrestling topics into the MMA account instead."}

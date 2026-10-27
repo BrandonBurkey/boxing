@@ -1,0 +1,60 @@
+{
+ "sport": "running",
+ "verdict": "GO",
+ "saturation": "CONTESTED (early)",
+ "scores": {
+  "demand": 5,
+  "format_gap": 3,
+  "geometry_fit": 5,
+  "name_pull": 3,
+  "wtp": 4,
+  "reuse": 4,
+  "risk": 4
+ },
+ "total": 81,
+ "strongest_incumbent": {
+  "handle": "@mattchoi6 (live-action, not animated)",
+  "followers": 473364,
+  "source": "https://www.tiktok.com/@mattchoi6 plain curl 2026-10-27 [verified-fetch]"
+ },
+ "best_hooks": [
+  "Short legs don't make you slow. Landing in front of your hips does. (Kipchoge, foot-to-hip distance line)",
+  "Long legs don't make Bolt fast. Fewer, harder steps do. (Bolt, step counter + timing bar)",
+  "Your lungs don't quit first. Your cadence does. (Kipchoge, metronome timing bar)"
+ ],
+ "props_needed": [
+  "run-cycle IK loop",
+  "scrolling ground/track line",
+  "centre-of-mass marker",
+  "cadence metronome HUD",
+  "lane lines (top-down)",
+  "starting blocks (optional)"
+ ],
+ "handles_free": [
+  "@stridelines",
+  "@runangles",
+  "@footstrikelab"
+ ],
+ "one_line_case": "Biggest participation and proven app spend (Strava bought Runna), with no animated faceless form account found; the engine fits one side-on body perfectly, but stars pull less and Ochy is the app rival for a form wedge.",
+ "geometry_operator_check": {
+  "date": "2026-10-27",
+  "method": "plain curl of tiktok.com/@<sport>.geometry, control @zzqxnotreal8812=10221",
+  "tennis.geometry": [
+   4267,
+   28
+  ],
+  "padel.geometry": [
+   2948,
+   38
+  ],
+  "golf.geometry": [
+   678,
+   30
+  ],
+  "running.geometry": [
+   0,
+   3
+  ],
+  "note": "Same bio pattern ('<Sport>, explained with angles', 'One fix a day') → likely one operator expanding sport by sport. [verified-fetch] [followers, videos]"
+ }
+}

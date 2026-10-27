@@ -1,0 +1,8 @@
+{"sport":"mma","verdict":"GO","saturation":"OPEN",
+ "scores":{"demand":4,"format_gap":4,"geometry_fit":4,"name_pull":5,"wtp":3,"reuse":3,"risk":4},
+ "total":77,
+ "strongest_incumbent":{"handle":"@mojahed.fudailat (adjacent: 3D UFC fight recaps, not technique)","followers":173444,"source":"https://www.tiktok.com/@mojahed.fudailat [verified-fetch 2026-10-27]"},
+ "best_hooks":["Bad takedown defence doesn't get you taken down. Standing with your back on the fence does. (Khabib)","Takedowns don't start with a shot. They start with a punch that lifts your hands. (Khabib)","Long legs don't win because they're long. They win because he kicks your knee before you step in. (Jon Jones)"],
+ "props_needed":["generic cage fence segment","open-finger gloves","kick poses","level-change/shot poses","body-lock lift","kneeling/ground-and-pound poses","fence-contact IK"],
+ "handles_free":["@fenceline","@fencelinemma","@cageangles","@cageanglesapp","@rangeshift","@rangeshiftapp"],
+ "one_line_case":"No technique-explainer incumbent found; animated UFC entertainment already pulls 123k-173k followers; biggest name pull of any sport; JAB AI is the app-side threat. Provisional pending in-app TikTok search."}

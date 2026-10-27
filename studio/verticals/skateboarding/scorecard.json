@@ -1,0 +1,16 @@
+{
+  "sport": "skateboarding",
+  "verdict": "NO",
+  "saturation": "CONTESTED",
+  "scores": {"demand": 4, "format_gap": 3, "geometry_fit": 2, "name_pull": 3, "wtp": 2, "reuse": 2, "risk": 3},
+  "total": 56,
+  "strongest_incumbent": {"handle": "@reesganimator (skater-animator; tutorial content unverified); tutorial leader @braille_skate 989,422 live action", "followers": 182254, "source": "https://www.tiktok.com/@reesganimator plain curl 2026-10-27 [verified-fetch]"},
+  "best_hooks": [
+    "Weak legs don't kill your ollie. Not sliding your front foot does. (Rodney Mullen, board angle)",
+    "Your kickflip doesn't need a harder flick. It needs a flick off the corner. (Mullen, top-down flick line)",
+    "Popping harder doesn't help. Jumping late does. (Nyjah Huston, pop vs jump timing bar)"
+  ],
+  "props_needed": ["skateboard with 3-axis flip physics", "ramp/quarterpipe", "ledge/rail", "flat-ground line", "foot-on-board contact constraints", "board-path trail"],
+  "handles_free": ["@popgeometry", "@flickangle", "@skateangles"],
+  "one_line_case": "Huge tutorial demand, but Braille (989k + own $7-10/mo app) owns the funnel, a 182k skater-animator is adjacent, every lesson needs board physics, and the audience is young and cheap."
+}

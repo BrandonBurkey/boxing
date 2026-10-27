@@ -1,0 +1,16 @@
+{
+  "sport": "climbing",
+  "verdict": "MAYBE",
+  "saturation": "OPEN",
+  "scores": {"demand": 3, "format_gap": 4, "geometry_fit": 4, "name_pull": 3, "wtp": 3, "reuse": 3, "risk": 4},
+  "total": 69,
+  "strongest_incumbent": {"handle": "none animated found; largest verified climbing-education TikTok @hoopersbeta (live action)", "followers": 3892, "source": "https://www.tiktok.com/@hoopersbeta plain curl 2026-10-27 [verified-fetch]"},
+  "best_hooks": [
+    "Weak fingers don't pull you off. Hips away from the wall do. (Ondra, hip-to-wall distance line)",
+    "You don't need more grip. You need weight on your feet. (Honnold, weight vector through feet)",
+    "Flagging isn't for show. It stops the barn door. (Ondra, centre of mass vs base)"
+  ],
+  "props_needed": ["climbing wall plane (vertical/overhang)", "hold set (jug, crimp, sloper, foothold)", "hanging/reaching IK poses incl. drop knee", "centre-of-mass marker + weight vector", "pump/grip HUD bar", "crash pad (optional)"],
+  "handles_free": ["@climbgeometry", "@betageometry", "@hipstowall"],
+  "one_line_case": "Best geometry after running and no animated incumbent found, but a smaller audience, a $60/yr app ceiling crowded by new AI-coach apps, and only Honnold has crossover name pull."
+}

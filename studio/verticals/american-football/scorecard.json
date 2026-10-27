@@ -1,0 +1,20 @@
+{
+  "sport": "american-football",
+  "verdict": "MAYBE",
+  "saturation": "OPEN",
+  "scores": {"demand": 4, "format_gap": 4, "geometry_fit": 3, "name_pull": 4, "wtp": 2, "reuse": 4, "risk": 3},
+  "total": 69,
+  "strongest_incumbent": {
+    "handle": "@2tallanimation (adjacent: animated sports comedy, not technique)",
+    "followers": 635746,
+    "source": "https://www.tiktok.com/@2tallanimation [verified-fetch 2026-10-27]"
+  },
+  "best_hooks": [
+    "Short D-linemen don't lose to tall tackles. High pad level does. (Aaron Donald, 6'1\")",
+    "Small receivers don't lose to press. Rounding the break does. (Justin Jefferson)",
+    "Missed flag pulls aren't about speed. Chasing the hip is. (flag football pursuit angle)"
+  ],
+  "props_needed": ["american ball (exists)", "line/arrow (exist)", "helmet + shoulder-pad mannequin silhouette", "3-point and 2-point stance poses", "top-down field with yard lines and hashes", "line of scrimmage", "flag belt"],
+  "handles_free": ["@breakpointfootball", "@breakpointfb", "@pocketgeometry", "@hipturnfootball"],
+  "one_line_case": "Big, open, two-body-friendly format gap, held back by weak proof that anyone pays for football technique apps; saturation confidence is low (search budget ran out)."
+}

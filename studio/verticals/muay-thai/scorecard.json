@@ -1,0 +1,8 @@
+{"sport":"muay-thai","verdict":"GO","saturation":"OPEN",
+ "scores":{"demand":3,"format_gap":4,"geometry_fit":5,"name_pull":3,"wtp":3,"reuse":4,"risk":5},
+ "total":76,
+ "strongest_incumbent":{"handle":"@fighter.thailand (Muay Thai art, not instructional)","followers":1478,"source":"https://www.tiktok.com/@fighter.thailand [verified-fetch 2026-10-27]"},
+ "best_hooks":["Short fighters don't lose to the teep. Walking straight into it does. (Saenchai)","Slow legs don't get you kicked. Leaving your weight on the lead leg does. (Buakaw)","Rodtang doesn't win by being tough. He wins by stepping inside your kick."],
+ "props_needed":["reuse boxing ring","Thai gloves/shorts unbranded","kick/teep/knee/elbow poses","shin contact marker","clinch neck-tie IK"],
+ "handles_free":["@teeptheory","@teeptheoryapp","@checklineapp","@clinchcraftapp"],
+ "one_line_case":"Closest to the boxing engine and no incumbent found; weaker name pull and thin app-payment evidence cap the upside."}

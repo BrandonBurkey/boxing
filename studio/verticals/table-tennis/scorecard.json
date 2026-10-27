@@ -1,0 +1,8 @@
+{"sport":"table-tennis","verdict":"NO","saturation":"OPEN",
+ "scores":{"demand":3,"format_gap":4,"geometry_fit":2,"name_pull":3,"wtp":2,"reuse":3,"risk":5},
+ "total":62,
+ "strongest_incumbent":{"handle":"@pongfinity (trick shots, not lessons)","followers":1793615,"source":"https://www.tiktok.com/@pongfinity"},
+ "best_hooks":["Short arms don't lose rallies. Standing too close does.","Footwork isn't about speed. It's one step, not three.","Your arm doesn't power the forehand. Your hips do."],
+ "props_needed":["table top-down and side","net","bat one-hand attachment","small ball with spin arrows and curved trajectory","low stance poses"],
+ "handles_free":["spinangle","pingpong.geometry","spinlines.tt"],
+ "one_line_case":"No animated technique account found, but the sport is spin physics, the TikTok audience is entertainment-led, China is off TikTok and no paid-app signal was verified."}
