@@ -1,5 +1,14 @@
 # Which sports to enter next: ranking after the 22-sport scout (2026-10-27)
 
+> **Founder decision, 2026-10-27: individual sports only.** The format (one body vs one opponent, or one body
+> fixing its own technique) and the app (solo practice) don't fit team sports, where the lessons are
+> positional and players learn from a club coach. Football, American football, rugby, cricket, volleyball,
+> ice hockey and baseball are **parked**. Basketball is the only borderline case (solo shooting and handles).
+> **Golf is the first new vertical: build started.**
+>
+> Active shortlist: Golf 79 · Running 81 (needs gait animation) · MMA 77 · Muay Thai 76 · Tennis 76
+> (contested) · Badminton 75 · BJJ 72 · Pickleball 71 · Swimming 71 · Climbing 69.
+
 **Short answer:** the faceless-animated-technique format is **almost unclaimed outside boxing**. Of 22 sports,
 none has a large animated technique account. One early operator is spreading the format sport by sport
 (`<sport>.geometry`: tennis 4.3k, padel 2.9k, golf 678, running 0). Most sports' "tips" audiences are owned by

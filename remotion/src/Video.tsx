@@ -46,7 +46,7 @@ const SideStage: React.FC<{c: Compiled; t: number}> = ({c, t}) => {
   return (
     <g>
       <Floor />
-      {overlays.filter((o) => o.type === 'prop').map((o, i) => <PropWorld key={'p' + i} o={o} c={c} t={t} />)}
+      {overlays.filter((o) => o.type === 'prop' || o.type === 'plane' || o.type === 'arcTrail').map((o, i) => <PropWorld key={'p' + i} o={o} c={c} t={t} />)}
       {overlays.filter((o) => o.type === 'zone').map((o, i) => <WorldOverlay key={'z' + i} o={o} c={c} t={t} />)}
       {ids.map((id, i) => {
         const a = c.actors[id];

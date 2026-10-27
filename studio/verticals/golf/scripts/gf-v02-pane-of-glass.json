@@ -1,0 +1,786 @@
+{
+ "id": "gf-v02-pane-of-glass",
+ "title": "The Pane of Glass (Hogan)",
+ "sport": "golf",
+ "accent": "#FFC145",
+ "accentDim": "#C9922A",
+ "caption": "Ben Hogan's pane of glass (Five Lessons, 1957) and the downswing that causes so many slices ⛳ #golf #golftips #benhogan #golfswing #slicefix",
+ "actors": [
+  {
+   "id": "you",
+   "palette": "you",
+   "heightIn": 70,
+   "x": 380,
+   "dir": 1,
+   "nearSide": "lead",
+   "hands": "hands",
+   "pose": "address",
+   "top": {
+    "x": 330,
+    "y": 1460,
+    "a": 0
+   }
+  }
+ ],
+ "beats": [
+  {
+   "id": "b01",
+   "chapter": "The slice",
+   "vo": "Your slice isn't always your *grip*.",
+   "slam": true,
+   "size": 112,
+   "cam": [
+    {
+     "at": 0,
+     "dur": 0.01,
+     "zoom": 1.12,
+     "cx": 470,
+     "cy": 1060
+    },
+    {
+     "at": 0.05,
+     "dur": 4.0,
+     "zoom": 1.0,
+     "cx": 540,
+     "cy": 1020,
+     "ease": "out"
+    }
+   ],
+   "actors": {
+    "you": [
+     {
+      "at": 0.0,
+      "dur": 0.01,
+      "pose": "address"
+     }
+    ]
+   },
+   "overlays": [
+    {
+     "type": "held",
+     "actor": "you",
+     "kind": "club",
+     "followPose": true,
+     "untilBeat": "b19"
+    },
+    {
+     "type": "ball",
+     "kind": "golf",
+     "r": 10,
+     "untilBeat": "b07",
+     "anchorClub": "you",
+     "trail": false
+    }
+   ]
+  },
+  {
+   "id": "b02",
+   "vo": "Often it's your *downswing*.",
+   "accent": true,
+   "stack": true,
+   "slam": true,
+   "size": 112,
+   "actors": {
+    "you": [
+     {
+      "at": 0.0,
+      "dur": 0.5,
+      "pose": "top"
+     },
+     {
+      "at": 0.55,
+      "dur": 0.3,
+      "pose": "overTop"
+     },
+     {
+      "at": 0.85,
+      "dur": 0.2,
+      "pose": "impact",
+      "ease": "snap"
+     },
+     {
+      "at": 1.05,
+      "dur": 0.4,
+      "pose": "finish"
+     }
+    ]
+   },
+   "overlays": [
+    {
+     "type": "float",
+     "actor": "you",
+     "text": "OVER THE TOP",
+     "color": "#FF4D5E",
+     "at": 0.6,
+     "dur": 1.0,
+     "dx": -100
+    }
+   ]
+  },
+  {
+   "id": "b03",
+   "chapter": "The problem",
+   "vo": "The ball starts left or straight, then curves hard *right*.",
+   "view": "top",
+   "overlays": [
+    {
+     "type": "pitch",
+     "lines": [
+      [
+       470,
+       1460,
+       470,
+       520
+      ]
+     ],
+     "untilBeat": "b04"
+    },
+    {
+     "type": "tball",
+     "from": [
+      470,
+      1460
+     ],
+     "to": [
+      470,
+      1460
+     ],
+     "dur": 0.01,
+     "untilBeat": "b04"
+    },
+    {
+     "type": "path",
+     "points": [
+      [
+       470,
+       1460
+      ],
+      [
+       420,
+       1150
+      ],
+      [
+       410,
+       900
+      ],
+      [
+       470,
+       700
+      ],
+      [
+       600,
+       560
+      ]
+     ],
+     "color": "#FF4D5E",
+     "label": "SLICE",
+     "lx": 620,
+     "ly": 760,
+     "at": 0.2,
+     "draw": 1.0,
+     "untilBeat": "b04"
+    },
+    {
+     "type": "typer",
+     "text": "RIGHT-HANDED GOLFER",
+     "at": 0.1,
+     "y": 1600,
+     "size": 28,
+     "color": "#8C96A6"
+    }
+   ]
+  },
+  {
+   "id": "b04",
+   "vo": "So you aim further *left* to allow for it.",
+   "top": {
+    "you": [
+     {
+      "at": 0.3,
+      "dur": 0.6,
+      "a": -12
+     }
+    ]
+   },
+   "overlays": [
+    {
+     "type": "path",
+     "points": [
+      [
+       470,
+       1460
+      ],
+      [
+       330,
+       700
+      ]
+     ],
+     "color": "#8C96A6",
+     "label": "AIM LEFT",
+     "lx": 330,
+     "ly": 660,
+     "at": 0.4,
+     "draw": 0.5
+    }
+   ]
+  },
+  {
+   "id": "b05",
+   "chapter": "Why it fails",
+   "vo": "Watch the start of your *downswing*.",
+   "view": "side",
+   "actors": {
+    "you": [
+     {
+      "at": 0.0,
+      "dur": 0.2,
+      "pose": "address"
+     },
+     {
+      "at": 0.6,
+      "dur": 0.4,
+      "pose": "takeaway"
+     },
+     {
+      "at": 1.0,
+      "dur": 0.5,
+      "pose": "top"
+     }
+    ]
+   },
+   "overlays": [
+    {
+     "type": "plane",
+     "actor": "you",
+     "label": "SWING PLANE",
+     "at": 0.25,
+     "untilBeat": "b07"
+    }
+   ]
+  },
+  {
+   "id": "b06",
+   "vo": "Your shoulders throw the club out toward the *ball*.",
+   "actors": {
+    "you": [
+     {
+      "at": 0.2,
+      "dur": 0.45,
+      "pose": "overTop"
+     }
+    ]
+   },
+   "overlays": [
+    {
+     "type": "arrow",
+     "points": [
+      [
+       400,
+       760
+      ],
+      [
+       520,
+       900
+      ]
+     ],
+     "label": "OUT",
+     "color": "#FF4D5E"
+    },
+    {
+     "type": "float",
+     "actor": "you",
+     "text": "OVER THE TOP",
+     "color": "#FF4D5E",
+     "at": 0.5,
+     "dur": 1.3,
+     "dx": -100
+    }
+   ]
+  },
+  {
+   "id": "b07",
+   "vo": "The club comes down *above* the line it went up on.",
+   "cam": [
+    {
+     "at": 0.1,
+     "dur": 0.7,
+     "zoom": 1.15,
+     "cx": 470,
+     "cy": 1000
+    }
+   ],
+   "actors": {
+    "you": [
+     {
+      "at": 0.0,
+      "dur": 0.01,
+      "pose": "top"
+     },
+     {
+      "at": 0.3,
+      "dur": 0.4,
+      "pose": "overTop"
+     },
+     {
+      "at": 0.8,
+      "dur": 0.25,
+      "pose": "impact",
+      "ease": "snap"
+     }
+    ]
+   },
+   "overlays": [
+    {
+     "type": "arcTrail",
+     "actor": "you",
+     "color": "#FF4D5E",
+     "label": "ABOVE THE PLANE",
+     "at": 0.25,
+     "dur": 1.6
+    }
+   ]
+  },
+  {
+   "id": "b08",
+   "vo": "So it cuts *across* the ball, out to in.",
+   "view": "top",
+   "cam": [
+    {
+     "at": 0.0,
+     "dur": 0.01,
+     "zoom": 1.0,
+     "cx": 540,
+     "cy": 1020
+    }
+   ],
+   "overlays": [
+    {
+     "type": "pitch",
+     "lines": [
+      [
+       470,
+       1460,
+       470,
+       520
+      ]
+     ],
+     "untilBeat": "b09"
+    },
+    {
+     "type": "tball",
+     "from": [
+      470,
+      1460
+     ],
+     "to": [
+      470,
+      1460
+     ],
+     "dur": 0.01,
+     "untilBeat": "b09"
+    },
+    {
+     "type": "path",
+     "points": [
+      [
+       560,
+       1600
+      ],
+      [
+       470,
+       1460
+      ],
+      [
+       390,
+       1330
+      ]
+     ],
+     "color": "#FF4D5E",
+     "label": "OUT TO IN",
+     "lx": 620,
+     "ly": 1360,
+     "at": 0.3,
+     "draw": 0.6
+    }
+   ]
+  },
+  {
+   "id": "b09",
+   "vo": "Leave the face open to that path and it *slices*.",
+   "overlays": [
+    {
+     "type": "path",
+     "points": [
+      [
+       470,
+       1460
+      ],
+      [
+       420,
+       1150
+      ],
+      [
+       410,
+       900
+      ],
+      [
+       470,
+       700
+      ],
+      [
+       600,
+       560
+      ]
+     ],
+     "color": "#FF4D5E",
+     "label": "SLICE",
+     "lx": 620,
+     "ly": 760,
+     "at": 0.6,
+     "draw": 0.9
+    }
+   ]
+  },
+  {
+   "id": "b10",
+   "chapter": "How Hogan did it",
+   "vo": "*Ben Hogan's* book pictured this in 1957.",
+   "view": "side",
+   "actors": {
+    "you": [
+     {
+      "at": 0.0,
+      "dur": 0.01,
+      "pose": "address"
+     }
+    ]
+   },
+   "overlays": [
+    {
+     "type": "name",
+     "actor": "you",
+     "text": "BEN HOGAN",
+     "at": 0.15
+    },
+    {
+     "type": "typer",
+     "text": "FIVE LESSONS · 1957",
+     "at": 0.6,
+     "y": 1500,
+     "size": 40,
+     "color": "#FFC145"
+    },
+    {
+     "type": "ball",
+     "kind": "golf",
+     "r": 10,
+     "untilBeat": "b17",
+     "anchorClub": "you",
+     "trail": false
+    }
+   ]
+  },
+  {
+   "id": "b11",
+   "vo": "A tilted pane of *glass*.",
+   "overlays": [
+    {
+     "type": "plane",
+     "actor": "you",
+     "label": "PANE OF GLASS",
+     "at": 0.2,
+     "untilBeat": "b16"
+    }
+   ]
+  },
+  {
+   "id": "b12",
+   "vo": "Resting on your shoulders, down to the *ball*.",
+   "cam": [
+    {
+     "at": 0.1,
+     "dur": 0.8,
+     "zoom": 1.12,
+     "cx": 470,
+     "cy": 1000
+    }
+   ]
+  },
+  {
+   "id": "b13",
+   "vo": "The idea: swing under it, and never *break* it.",
+   "cam": [
+    {
+     "at": 0.0,
+     "dur": 0.6,
+     "zoom": 1.0,
+     "cx": 540,
+     "cy": 1020
+    }
+   ],
+   "actors": {
+    "you": [
+     {
+      "at": 0.2,
+      "dur": 0.2,
+      "pose": "address"
+     },
+     {
+      "at": 0.45,
+      "dur": 0.4,
+      "pose": "takeaway"
+     },
+     {
+      "at": 0.8500000000000001,
+      "dur": 0.5,
+      "pose": "top"
+     },
+     {
+      "at": 1.4,
+      "dur": 0.25,
+      "pose": "impact",
+      "ease": "snap"
+     },
+     {
+      "at": 1.65,
+      "dur": 0.15,
+      "pose": "through"
+     },
+     {
+      "at": 1.7999999999999998,
+      "dur": 0.5,
+      "pose": "finish"
+     }
+    ]
+   },
+   "overlays": [
+    {
+     "type": "float",
+     "actor": "you",
+     "text": "DON'T BREAK THE GLASS",
+     "at": 1.0,
+     "dur": 1.3,
+     "dx": -120
+    }
+   ]
+  },
+  {
+   "id": "b14",
+   "chapter": "The fix",
+   "vo": "Staying under it takes practice — the app I'm building shows you the plane before each slice drill — so try this.",
+   "actors": {
+    "you": [
+     {
+      "at": 0.0,
+      "dur": 0.4,
+      "pose": "address"
+     },
+     {
+      "at": 3.0,
+      "dur": 0.5,
+      "pose": "takeaway"
+     },
+     {
+      "at": 3.5,
+      "dur": 0.6,
+      "pose": "top"
+     }
+    ]
+   },
+   "overlays": [
+    {
+     "type": "tag",
+     "at": 1.5,
+     "dur": 1.5,
+     "y": 1500
+    }
+   ]
+  },
+  {
+   "id": "b15",
+   "vo": "From the top, let your trail elbow drop toward your *hip*.",
+   "actors": {
+    "you": [
+     {
+      "at": 0.3,
+      "dur": 0.6,
+      "pose": "transition",
+      "ease": "out"
+     }
+    ]
+   },
+   "overlays": [
+    {
+     "type": "arrow",
+     "points": [
+      [
+       420,
+       760
+      ],
+      [
+       400,
+       900
+      ]
+     ],
+     "label": "ELBOW DOWN",
+     "color": "#FFC145"
+    }
+   ]
+  },
+  {
+   "id": "b16",
+   "vo": "Hands fall *down*, not out.",
+   "actors": {
+    "you": [
+     {
+      "at": 0.0,
+      "dur": 0.01,
+      "pose": "transition"
+     },
+     {
+      "at": 0.3,
+      "dur": 0.25,
+      "pose": "impact",
+      "ease": "snap"
+     },
+     {
+      "at": 0.55,
+      "dur": 0.15,
+      "pose": "through"
+     },
+     {
+      "at": 0.7,
+      "dur": 0.5,
+      "pose": "finish"
+     }
+    ]
+   },
+   "overlays": [
+    {
+     "type": "arcTrail",
+     "actor": "you",
+     "color": "#FFC145",
+     "label": "UNDER THE GLASS",
+     "at": 0.0,
+     "dur": 1.6
+    },
+    {
+     "type": "chips",
+     "items": [
+      "DOWN",
+      "NOT OUT"
+     ],
+     "at": 0.1,
+     "step": 0.6,
+     "y": 1500
+    }
+   ]
+  },
+  {
+   "id": "b17",
+   "vo": "Feel the club arrive from *inside* the ball.",
+   "view": "top",
+   "overlays": [
+    {
+     "type": "pitch",
+     "lines": [
+      [
+       470,
+       1460,
+       470,
+       520
+      ]
+     ]
+    },
+    {
+     "type": "tball",
+     "from": [
+      470,
+      1460
+     ],
+     "to": [
+      470,
+      1460
+     ],
+     "dur": 0.01
+    },
+    {
+     "type": "path",
+     "points": [
+      [
+       380,
+       1600
+      ],
+      [
+       470,
+       1460
+      ],
+      [
+       540,
+       1330
+      ]
+     ],
+     "color": "#FFC145",
+     "label": "FROM INSIDE",
+     "lx": 300,
+     "ly": 1360,
+     "at": 0.3,
+     "draw": 0.6
+    }
+   ]
+  },
+  {
+   "id": "b18",
+   "chapter": "Remember",
+   "vo": "Many slices start at the *top*.",
+   "slam": true,
+   "size": 112,
+   "view": "side",
+   "actors": {
+    "you": [
+     {
+      "at": 0.0,
+      "dur": 0.3,
+      "pose": "address"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b19",
+   "vo": "Start down *under* the glass.",
+   "accent": true,
+   "stack": true,
+   "slam": true,
+   "size": 112,
+   "pad": 0.8,
+   "actors": {
+    "you": [
+     {
+      "at": 0.2,
+      "dur": 0.4,
+      "pose": "takeaway"
+     },
+     {
+      "at": 0.6,
+      "dur": 0.5,
+      "pose": "top"
+     },
+     {
+      "at": 1.15,
+      "dur": 0.5,
+      "pose": "transition"
+     }
+    ]
+   },
+   "overlays": [
+    {
+     "type": "plane",
+     "actor": "you",
+     "label": "PANE OF GLASS",
+     "at": 0.0
+    }
+   ]
+  }
+ ]
+}

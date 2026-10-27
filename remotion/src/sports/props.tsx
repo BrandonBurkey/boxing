@@ -2,19 +2,33 @@
 import React from 'react';
 import {theme, FLOOR_Y} from '../theme';
 import {Compiled, ease} from '../timeline';
-import {solve} from '../rig';
+import {solve, POSES, Pose} from '../rig';
 import {actorAt} from '../timeline';
 
 type O = Compiled['overlays'][number];
 type Pt = [number, number];
 
-export const PROP_WORLD_TYPES = ['ball', 'prop', 'held', 'arrow'];
+export const PROP_WORLD_TYPES = ['ball', 'prop', 'held', 'arrow', 'plane', 'arcTrail'];
 export const PROP_TOP_TYPES = ['pitch', 'tball', 'player'];
 
 const fade = (o: O, t: number) => ease('snap', (t - o.t0) / 0.15) * (1 - ease('in', (t - (o.t1 - 0.12)) / 0.12));
 
+// Golf club: grip at the lead hand, angle from the pose (degrees, actor-local: 0 forward, 90 down).
+export const clubWorld = (c: Compiled, actorId: string, t: number, len = 0.47, poseOverride?: Pose) => {
+  const a = c.actors[actorId];
+  const st0 = actorAt(c.actorKFs[actorId], t);
+  const st = poseOverride ? {...st0, pose: poseOverride} : st0;
+  const s = solve(st.pose, a.reach ?? 1);
+  const gx = st.x + a.dir * s.lead.glove.x * a.heightPx;
+  const gy = FLOOR_Y - s.lead.glove.y * a.heightPx;
+  const ang = ((a.dir === 1 ? st.pose.club : 180 - st.pose.club) * Math.PI) / 180;
+  const L = len * a.heightPx;
+  return {grip: {x: gx, y: gy}, head: {x: gx + Math.cos(ang) * L, y: gy + Math.sin(ang) * L}, ang};
+};
+
 // Ball moving along keyframed legs: legs = [{at, dur, from:[x,y], to:[x,y], arc}], times relative to overlay start.
 export const ballPos = (o: O, t: number): {x: number; y: number; moving: boolean} => {
+  if (!o.legs && !o.from) return {x: 0, y: 0, moving: false};
   const legs: {at: number; dur: number; from: Pt; to: Pt; arc?: number; ease?: string}[] = o.legs ?? [{at: 0, dur: o.dur ?? 0.5, from: o.from, to: o.to, arc: o.arc}];
   const local = t - o.t0;
   let pos: Pt = legs[0].from;
@@ -64,7 +78,13 @@ export const PropWorld: React.FC<{o: O; c: Compiled; t: number}> = ({o, c, t}) =
   switch (o.type) {
     case 'ball': {
       const r = o.r ?? 22;
-      const p = ballPos(o, t);
+      let p = ballPos(o, t);
+      if (o.anchorClub) {
+        // golf ball sits at the clubhead's address position; legs (if any) are offsets from there
+        const h = clubWorld(c, o.anchorClub, o.t0, 0.47, POSES.address).head;
+        const off = o.legs || o.from ? ballPos(o, t) : {x: 0, y: 0, moving: false};
+        p = {x: h.x + 14 + off.x, y: FLOOR_Y - r + off.y, moving: off.moving};
+      }
       const trail = o.trail !== false && p.moving;
       const shadowScale = Math.max(0.3, 1 - (FLOOR_Y - p.y) / 900);
       return (
@@ -72,7 +92,8 @@ export const PropWorld: React.FC<{o: O; c: Compiled; t: number}> = ({o, c, t}) =
           <ellipse cx={p.x} cy={FLOOR_Y + 4} rx={r * 1.1 * shadowScale} ry={r * 0.25 * shadowScale} fill="rgba(0,0,0,0.45)" />
           {trail &&
             [0.05, 0.1, 0.15].map((d, i) => {
-              const q = ballPos(o, t - d);
+              const q0 = ballPos(o, t - d);
+              const q = o.anchorClub ? {x: p.x - (ballPos(o, t).x - q0.x), y: p.y - (ballPos(o, t).y - q0.y)} : q0;
               return <circle key={i} cx={q.x} cy={q.y} r={r * (0.85 - i * 0.2)} fill={theme.accent} opacity={0.22 - i * 0.06} />;
             })}
           <BallShape x={p.x} y={p.y} r={r} kind={o.kind ?? 'football'} spin={(t - o.t0) * (o.spin ?? 540)} />
@@ -150,8 +171,10 @@ export const PropWorld: React.FC<{o: O; c: Compiled; t: number}> = ({o, c, t}) =
       const wx = (p: {x: number; y: number}) => ({x: st.x + a.dir * p.x * a.heightPx, y: FLOOR_Y - p.y * a.heightPx});
       const g = wx(hand.glove);
       const el = wx(hand.el);
-      const base = Math.atan2(g.y - el.y, g.x - el.x) + ((o.angle ?? 0) * Math.PI) / 180 * a.dir;
-      const L = (o.len ?? 0.32) * a.heightPx;
+      const base = o.followPose
+        ? ((a.dir === 1 ? st.pose.club : 180 - st.pose.club) * Math.PI) / 180
+        : Math.atan2(g.y - el.y, g.x - el.x) + ((o.angle ?? 0) * Math.PI) / 180 * a.dir;
+      const L = (o.len ?? (o.followPose ? 0.47 : 0.32)) * a.heightPx;
       const ex = g.x + Math.cos(base) * L;
       const ey = g.y + Math.sin(base) * L;
       const kind = o.kind ?? 'bat';
@@ -164,11 +187,58 @@ export const PropWorld: React.FC<{o: O; c: Compiled; t: number}> = ({o, c, t}) =
             </g>
           ) : kind === 'club' ? (
             <g>
-              <line x1={g.x} y1={g.y} x2={ex} y2={ey} stroke="#C9D1DC" strokeWidth={8} strokeLinecap="round" />
-              <rect x={ex - 14} y={ey - 9} width={34} height={18} rx={6} fill="#C9D1DC" transform={`rotate(${(base * 180) / Math.PI} ${ex} ${ey})`} />
+              <line x1={g.x - Math.cos(base) * 26} y1={g.y - Math.sin(base) * 26} x2={g.x + Math.cos(base) * 70} y2={g.y + Math.sin(base) * 70} stroke="#1E232D" strokeWidth={13} strokeLinecap="round" />
+              <line x1={g.x} y1={g.y} x2={ex} y2={ey} stroke="#C9D1DC" strokeWidth={7} strokeLinecap="round" />
+              <path d={`M${ex},${ey} l${a.dir * 30},${6} l${a.dir * 2},${14} l${-a.dir * 34},${-4} Z`} fill="#AEB8C6" stroke="#E6ECF3" strokeWidth={2} />
             </g>
           ) : (
             <line x1={g.x} y1={g.y} x2={ex} y2={ey} stroke={kind === 'stick' ? '#3A2A1E' : '#D9B77E'} strokeWidth={kind === 'bat' ? 22 : 12} strokeLinecap="round" />
+          )}
+        </g>
+      );
+    }
+    case 'plane': {
+      // dashed line along the shaft, frozen when the overlay appears
+      const cw = clubWorld(c, o.actor, o.freezeAt != null ? o.t0 + o.freezeAt : o.t0, o.len);
+      const dx = Math.cos(cw.ang);
+      const dy = Math.sin(cw.ang);
+      const back = 80;
+      const fwd = o.extend ?? 760;
+      const grow = ease('out', (t - o.t0) / 0.5);
+      const x1 = cw.head.x + dx * back;
+      const y1 = cw.head.y + dy * back;
+      const x2 = cw.head.x - dx * fwd * grow;
+      const y2 = cw.head.y - dy * fwd * grow;
+      const col = o.color ?? theme.accent;
+      return (
+        <g opacity={k}>
+          <line x1={x1} y1={y1} x2={x2} y2={y2} stroke={col} strokeWidth={6} strokeDasharray="14 12" strokeLinecap="round" opacity={0.9} />
+          {o.label && grow > 0.6 && (
+            <text x={cw.head.x - dx * fwd * 0.9 + (o.lx ?? 30)} y={cw.head.y - dy * fwd * 0.9 + (o.ly ?? 10)} textAnchor="start" fontFamily={theme.fontBody} fontWeight={900} fontSize={26} letterSpacing="0.18em" fill={col}>
+              {o.label}
+            </text>
+          )}
+        </g>
+      );
+    }
+    case 'arcTrail': {
+      // clubhead path from overlay start until now
+      const pts: string[] = [];
+      const end = Math.min(t, o.t1);
+      for (let tt = o.t0; tt <= end; tt += 1 / 90) {
+        const h = clubWorld(c, o.actor, tt, o.len).head;
+        pts.push(`${h.x.toFixed(1)},${h.y.toFixed(1)}`);
+      }
+      if (pts.length < 2) return null;
+      const col = o.color ?? theme.accent;
+      return (
+        <g opacity={k}>
+          <polyline points={pts.join(' ')} fill="none" stroke={col} strokeWidth={10} strokeLinecap="round" strokeLinejoin="round" opacity={0.25} />
+          <polyline points={pts.join(' ')} fill="none" stroke={col} strokeWidth={4} strokeLinecap="round" strokeLinejoin="round" />
+          {o.label && (
+            <text x={o.lx ?? 540} y={o.ly ?? 700} textAnchor="middle" fontFamily={theme.fontBody} fontWeight={900} fontSize={28} letterSpacing="0.18em" fill={col}>
+              {o.label}
+            </text>
           )}
         </g>
       );

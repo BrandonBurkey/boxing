@@ -1,0 +1,771 @@
+{
+ "script": {
+  "id": "gf-v01-short-arc",
+  "title": "The Short Arc (McIlroy)",
+  "sport": "golf",
+  "accent": "#FFC145",
+  "accentDim": "#C9922A",
+  "caption": "Rory McIlroy: listed at 5'10\", No.1 in PGA Tour driving distance in 2023. You can't change your height. You can change your arc ⛳ Not affiliated with Rory McIlroy or the PGA TOUR. #golf #golftips #rorymcilroy #golfswing #drivingdistance",
+  "actors": [
+   {
+    "id": "you",
+    "palette": "you",
+    "heightIn": 70,
+    "x": 380,
+    "dir": 1,
+    "nearSide": "lead",
+    "hands": "hands",
+    "pose": "address"
+   },
+   {
+    "id": "opp",
+    "palette": "opp",
+    "heightIn": 76,
+    "x": 700,
+    "dir": 1,
+    "nearSide": "lead",
+    "hands": "hands",
+    "pose": "address"
+   }
+  ],
+  "beats": [
+   {
+    "id": "b01",
+    "chapter": "Short golfers",
+    "vo": "Short golfers can still hit it *far*.",
+    "slam": true,
+    "size": 112,
+    "cam": [
+     {
+      "at": 0,
+      "dur": 0.01,
+      "zoom": 1.12,
+      "cx": 470,
+      "cy": 1060
+     },
+     {
+      "at": 0.05,
+      "dur": 4,
+      "zoom": 1,
+      "cx": 540,
+      "cy": 1020,
+      "ease": "out"
+     }
+    ],
+    "actors": {
+     "you": [
+      {
+       "at": 0.2,
+       "dur": 0.2,
+       "pose": "address"
+      },
+      {
+       "at": 0.45,
+       "dur": 0.4,
+       "pose": "takeaway"
+      },
+      {
+       "at": 0.8500000000000001,
+       "dur": 0.5,
+       "pose": "shortTop"
+      },
+      {
+       "at": 1.4,
+       "dur": 0.25,
+       "pose": "impact",
+       "ease": "snap"
+      },
+      {
+       "at": 1.65,
+       "dur": 0.15,
+       "pose": "through"
+      },
+      {
+       "at": 1.7999999999999998,
+       "dur": 0.5,
+       "pose": "finish"
+      }
+     ],
+     "opp": [
+      {
+       "at": 0,
+       "dur": 0.01,
+       "opacity": 0
+      }
+     ]
+    },
+    "overlays": [
+     {
+      "type": "held",
+      "actor": "you",
+      "kind": "club",
+      "followPose": true,
+      "untilBeat": "b18"
+     },
+     {
+      "type": "ball",
+      "kind": "golf",
+      "r": 10,
+      "untilBeat": "b08",
+      "anchorClub": "you",
+      "trail": false
+     }
+    ],
+    "voDur": 2.01
+   },
+   {
+    "id": "b02",
+    "vo": "A short *arc* costs you distance.",
+    "accent": true,
+    "stack": true,
+    "slam": true,
+    "size": 112,
+    "actors": {
+     "you": [
+      {
+       "at": 0,
+       "dur": 0.2,
+       "pose": "address"
+      },
+      {
+       "at": 0.25,
+       "dur": 0.4,
+       "pose": "takeaway"
+      },
+      {
+       "at": 0.65,
+       "dur": 0.5,
+       "pose": "shortTop"
+      },
+      {
+       "at": 1.2,
+       "dur": 0.25,
+       "pose": "impact",
+       "ease": "snap"
+      },
+      {
+       "at": 1.45,
+       "dur": 0.15,
+       "pose": "through"
+      },
+      {
+       "at": 1.5999999999999999,
+       "dur": 0.5,
+       "pose": "finish"
+      }
+     ]
+    },
+    "overlays": [
+     {
+      "type": "arcTrail",
+      "actor": "you",
+      "color": "#FF4D5E",
+      "label": "SHORT ARC",
+      "at": 0,
+      "dur": 2.2
+     }
+    ],
+    "voDur": 1.74
+   },
+   {
+    "id": "b03",
+    "chapter": "The problem",
+    "vo": "As the club goes back, your arms *fold*.",
+    "actors": {
+     "you": [
+      {
+       "at": 0,
+       "dur": 0.3,
+       "pose": "address"
+      },
+      {
+       "at": 0.4,
+       "dur": 0.5,
+       "pose": "takeaway"
+      },
+      {
+       "at": 0.95,
+       "dur": 0.6,
+       "pose": "shortTop"
+      }
+     ]
+    },
+    "overlays": [
+     {
+      "type": "float",
+      "actor": "you",
+      "text": "ARMS FOLD",
+      "color": "#FF4D5E",
+      "at": 1,
+      "dur": 1.2,
+      "dx": -90
+     }
+    ],
+    "voDur": 2.19
+   },
+   {
+    "id": "b04",
+    "vo": "At the top, the club sits tight to your *head*.",
+    "cam": [
+     {
+      "at": 0.1,
+      "dur": 0.7,
+      "zoom": 1.25,
+      "cx": 380,
+      "cy": 820
+     }
+    ],
+    "overlays": [
+     {
+      "type": "marker",
+      "actor": "you",
+      "text": "TIGHT",
+      "at": 0.3
+     }
+    ],
+    "voDur": 2.2
+   },
+   {
+    "id": "b05",
+    "vo": "So you swing *harder* to make up for it.",
+    "cam": [
+     {
+      "at": 0,
+      "dur": 0.6,
+      "zoom": 1,
+      "cx": 540,
+      "cy": 1020
+     }
+    ],
+    "actors": {
+     "you": [
+      {
+       "at": 0.25,
+       "dur": 0.25,
+       "pose": "impact",
+       "ease": "snap"
+      },
+      {
+       "at": 0.5,
+       "dur": 0.15,
+       "pose": "through"
+      },
+      {
+       "at": 0.65,
+       "dur": 0.4,
+       "pose": "offBalance"
+      }
+     ]
+    },
+    "overlays": [
+     {
+      "type": "float",
+      "actor": "you",
+      "text": "HARDER?",
+      "color": "#8C96A6",
+      "size": 40,
+      "at": 0.4,
+      "dur": 1.4,
+      "dx": 20
+     }
+    ],
+    "voDur": 1.89
+   },
+   {
+    "id": "b06",
+    "chapter": "Why it fails",
+    "vo": "A small circle gives the clubhead less *runway*.",
+    "actors": {
+     "you": [
+      {
+       "at": 0,
+       "dur": 0.2,
+       "pose": "address"
+      },
+      {
+       "at": 0.25,
+       "dur": 0.4,
+       "pose": "takeaway"
+      },
+      {
+       "at": 0.65,
+       "dur": 0.5,
+       "pose": "shortTop"
+      },
+      {
+       "at": 1.2,
+       "dur": 0.25,
+       "pose": "impact",
+       "ease": "snap"
+      },
+      {
+       "at": 1.45,
+       "dur": 0.15,
+       "pose": "through"
+      },
+      {
+       "at": 1.5999999999999999,
+       "dur": 0.5,
+       "pose": "finish"
+      }
+     ]
+    },
+    "overlays": [
+     {
+      "type": "arcTrail",
+      "actor": "you",
+      "color": "#FF4D5E",
+      "label": "SMALL CIRCLE",
+      "at": 0,
+      "dur": 2.6
+     }
+    ],
+    "voDur": 2.6
+   },
+   {
+    "id": "b07",
+    "vo": "Less runway means less *speed*.",
+    "overlays": [
+     {
+      "type": "chips",
+      "items": [
+       "SMALL CIRCLE",
+       "LESS RUNWAY",
+       "LESS SPEED"
+      ],
+      "at": 0.1,
+      "step": 0.5,
+      "lastAccent": true,
+      "y": 1500
+     }
+    ],
+    "voDur": 1.71
+   },
+   {
+    "id": "b08",
+    "vo": "Swinging harder won't make the circle *bigger*.",
+    "actors": {
+     "you": [
+      {
+       "at": 0,
+       "dur": 0.2,
+       "pose": "address"
+      },
+      {
+       "at": 0.25,
+       "dur": 0.4,
+       "pose": "takeaway"
+      },
+      {
+       "at": 0.65,
+       "dur": 0.5,
+       "pose": "shortTop"
+      },
+      {
+       "at": 1.2,
+       "dur": 0.25,
+       "pose": "impact",
+       "ease": "snap"
+      },
+      {
+       "at": 1.45,
+       "dur": 0.15,
+       "pose": "through"
+      },
+      {
+       "at": 1.5999999999999999,
+       "dur": 0.5,
+       "pose": "offBalance"
+      }
+     ]
+    },
+    "voDur": 2.26
+   },
+   {
+    "id": "b09",
+    "chapter": "How McIlroy does it",
+    "vo": "*Rory McIlroy* is listed at five foot ten.",
+    "actors": {
+     "you": [
+      {
+       "at": 0,
+       "dur": 0.3,
+       "pose": "address"
+      }
+     ],
+     "opp": [
+      {
+       "at": 0.6,
+       "dur": 0.4,
+       "opacity": 1
+      }
+     ]
+    },
+    "overlays": [
+     {
+      "type": "name",
+      "actor": "you",
+      "text": "RORY McILROY",
+      "at": 0.15,
+      "high": true
+     },
+     {
+      "type": "height",
+      "actor": "you",
+      "text": "5'10\"",
+      "at": 0.5,
+      "dur": 4.2
+     },
+     {
+      "type": "height",
+      "actor": "opp",
+      "text": "TALLER GOLFER",
+      "align": "right",
+      "at": 0.9,
+      "dur": 3.8
+     },
+     {
+      "type": "ball",
+      "kind": "golf",
+      "r": 10,
+      "untilBeat": "b16",
+      "anchorClub": "you",
+      "trail": false
+     }
+    ],
+    "voDur": 2.6
+   },
+   {
+    "id": "b10",
+    "vo": "In 2023, he led the PGA Tour in driving *distance*.",
+    "actors": {
+     "you": [
+      {
+       "at": 0.4,
+       "dur": 0.2,
+       "pose": "address"
+      },
+      {
+       "at": 0.65,
+       "dur": 0.4,
+       "pose": "takeaway"
+      },
+      {
+       "at": 1.05,
+       "dur": 0.5,
+       "pose": "wideTop"
+      },
+      {
+       "at": 1.6,
+       "dur": 0.25,
+       "pose": "impact",
+       "ease": "snap"
+      },
+      {
+       "at": 1.85,
+       "dur": 0.15,
+       "pose": "through"
+      },
+      {
+       "at": 2,
+       "dur": 0.5,
+       "pose": "finish"
+      }
+     ]
+    },
+    "overlays": [
+     {
+      "type": "typer",
+      "text": "PGA TOUR DRIVING DISTANCE · NO.1 · 2023",
+      "at": 0.5,
+      "y": 1500,
+      "size": 34,
+      "color": "#FFC145"
+     }
+    ],
+    "voDur": 4.66
+   },
+   {
+    "id": "b11",
+    "vo": "Watch his arms. They stay *long* going back.",
+    "actors": {
+     "opp": [
+      {
+       "at": 0,
+       "dur": 0.4,
+       "opacity": 0
+      }
+     ],
+     "you": [
+      {
+       "at": 0,
+       "dur": 0.3,
+       "pose": "address"
+      },
+      {
+       "at": 0.4,
+       "dur": 0.6,
+       "pose": "takeaway"
+      },
+      {
+       "at": 1.1,
+       "dur": 0.7,
+       "pose": "wideTop"
+      }
+     ]
+    },
+    "overlays": [
+     {
+      "type": "arcTrail",
+      "actor": "you",
+      "color": "#FFC145",
+      "label": "WIDE ARC",
+      "at": 0.3,
+      "untilBeat": "b12"
+     }
+    ],
+    "voDur": 2.75
+   },
+   {
+    "id": "b12",
+    "vo": "Wide on the way back. Wide on the way *through*.",
+    "actors": {
+     "you": [
+      {
+       "at": 0.2,
+       "dur": 0.25,
+       "pose": "impact",
+       "ease": "snap"
+      },
+      {
+       "at": 0.45,
+       "dur": 0.2,
+       "pose": "through"
+      },
+      {
+       "at": 0.65,
+       "dur": 0.5,
+       "pose": "finish"
+      }
+     ]
+    },
+    "overlays": [
+     {
+      "type": "chips",
+      "items": [
+       "WIDE BACK",
+       "WIDE THROUGH"
+      ],
+      "at": 0.1,
+      "step": 0.9,
+      "lastAccent": true,
+      "y": 1500
+     }
+    ],
+    "voDur": 2.62
+   },
+   {
+    "id": "b13",
+    "chapter": "The fix",
+    "vo": "Width is a feel you can train — the app I'm building opens each drill with a checkpoint like this — so here's yours.",
+    "actors": {
+     "you": [
+      {
+       "at": 0,
+       "dur": 0.4,
+       "pose": "address"
+      },
+      {
+       "at": 2.6,
+       "dur": 0.6,
+       "pose": "takeaway"
+      },
+      {
+       "at": 3.3,
+       "dur": 0.7,
+       "pose": "wideTop"
+      }
+     ]
+    },
+    "overlays": [
+     {
+      "type": "tag",
+      "at": 1.5,
+      "dur": 1.5,
+      "y": 1500
+     }
+    ],
+    "voDur": 7
+   },
+   {
+    "id": "b14",
+    "vo": "Start the club *low and wide* away from the ball.",
+    "actors": {
+     "you": [
+      {
+       "at": 0,
+       "dur": 0.3,
+       "pose": "address"
+      },
+      {
+       "at": 0.35,
+       "dur": 0.9,
+       "pose": "takeaway",
+       "ease": "out"
+      }
+     ]
+    },
+    "overlays": [
+     {
+      "type": "arrow",
+      "points": [
+       [
+        560,
+        1330
+       ],
+       [
+        330,
+        1320
+       ]
+      ],
+      "label": "LOW AND WIDE",
+      "color": "#FFC145"
+     }
+    ],
+    "voDur": 2.42
+   },
+   {
+    "id": "b15",
+    "vo": "Keep your lead arm long, not *locked*.",
+    "actors": {
+     "you": [
+      {
+       "at": 0.2,
+       "dur": 0.7,
+       "pose": "wideTop"
+      }
+     ]
+    },
+    "overlays": [
+     {
+      "type": "float",
+      "actor": "you",
+      "text": "LONG, NOT LOCKED",
+      "at": 0.6,
+      "dur": 1.4,
+      "dx": -110
+     }
+    ],
+    "voDur": 1.9
+   },
+   {
+    "id": "b16",
+    "vo": "Then let your arms *extend* after the ball.",
+    "actors": {
+     "you": [
+      {
+       "at": 0.2,
+       "dur": 0.25,
+       "pose": "impact",
+       "ease": "snap"
+      },
+      {
+       "at": 0.45,
+       "dur": 0.25,
+       "pose": "through"
+      },
+      {
+       "at": 0.75,
+       "dur": 0.5,
+       "pose": "finish"
+      }
+     ]
+    },
+    "overlays": [
+     {
+      "type": "arcTrail",
+      "actor": "you",
+      "color": "#FFC145",
+      "label": "EXTEND",
+      "at": 0.1,
+      "dur": 1.8
+     }
+    ],
+    "voDur": 2.2
+   },
+   {
+    "id": "b17",
+    "chapter": "Remember",
+    "vo": "You can't change your height.",
+    "slam": true,
+    "size": 112,
+    "actors": {
+     "you": [
+      {
+       "at": 0,
+       "dur": 0.4,
+       "pose": "address"
+      }
+     ]
+    },
+    "voDur": 1.22
+   },
+   {
+    "id": "b18",
+    "vo": "You can change your *arc*.",
+    "accent": true,
+    "stack": true,
+    "slam": true,
+    "size": 112,
+    "pad": 0.8,
+    "actors": {
+     "you": [
+      {
+       "at": 0.1,
+       "dur": 0.4,
+       "pose": "takeaway"
+      },
+      {
+       "at": 0.5,
+       "dur": 0.5,
+       "pose": "wideTop"
+      }
+     ]
+    },
+    "voDur": 1.28
+   }
+  ]
+ },
+ "vo": {
+  "b01": "vo/gf-v01-short-arc/b01.wav",
+  "b02": "vo/gf-v01-short-arc/b02.wav",
+  "b03": "vo/gf-v01-short-arc/b03.wav",
+  "b04": "vo/gf-v01-short-arc/b04.wav",
+  "b05": "vo/gf-v01-short-arc/b05.wav",
+  "b06": "vo/gf-v01-short-arc/b06.wav",
+  "b07": "vo/gf-v01-short-arc/b07.wav",
+  "b08": "vo/gf-v01-short-arc/b08.wav",
+  "b09": "vo/gf-v01-short-arc/b09.wav",
+  "b10": "vo/gf-v01-short-arc/b10.wav",
+  "b11": "vo/gf-v01-short-arc/b11.wav",
+  "b12": "vo/gf-v01-short-arc/b12.wav",
+  "b13": "vo/gf-v01-short-arc/b13.wav",
+  "b14": "vo/gf-v01-short-arc/b14.wav",
+  "b15": "vo/gf-v01-short-arc/b15.wav",
+  "b16": "vo/gf-v01-short-arc/b16.wav",
+  "b17": "vo/gf-v01-short-arc/b17.wav",
+  "b18": "vo/gf-v01-short-arc/b18.wav"
+ },
+ "sfx": [
+  "bass_hit",
+  "bell",
+  "hud_beep",
+  "impact_heavy",
+  "impact_light",
+  "pop",
+  "riser",
+  "tick",
+  "whoosh",
+  "whoosh_fast"
+ ]
+}

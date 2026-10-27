@@ -1,0 +1,82 @@
+{
+ "voice": "am_michael",
+ "speed": 1.1,
+ "lines": [
+  {
+   "id": "b01",
+   "text": "Your slice isn't always your grip."
+  },
+  {
+   "id": "b02",
+   "text": "Often it's your downswing."
+  },
+  {
+   "id": "b03",
+   "text": "The ball starts left or straight, then curves hard right."
+  },
+  {
+   "id": "b04",
+   "text": "So you aim further left to allow for it."
+  },
+  {
+   "id": "b05",
+   "text": "Watch the start of your downswing."
+  },
+  {
+   "id": "b06",
+   "text": "Your shoulders throw the club out toward the ball."
+  },
+  {
+   "id": "b07",
+   "text": "The club comes down above the line it went up on."
+  },
+  {
+   "id": "b08",
+   "text": "So it cuts across the ball, out to in."
+  },
+  {
+   "id": "b09",
+   "text": "Leave the face open to that path and it slices."
+  },
+  {
+   "id": "b10",
+   "text": "Ben Hogan's book pictured this in 1957."
+  },
+  {
+   "id": "b11",
+   "text": "A tilted pane of glass."
+  },
+  {
+   "id": "b12",
+   "text": "Resting on your shoulders, down to the ball."
+  },
+  {
+   "id": "b13",
+   "text": "The idea: swing under it, and never break it."
+  },
+  {
+   "id": "b14",
+   "text": "Staying under it takes practice, the app I'm building shows you the plane before each slice drill, so try this."
+  },
+  {
+   "id": "b15",
+   "text": "From the top, let your trail elbow drop toward your hip."
+  },
+  {
+   "id": "b16",
+   "text": "Hands fall down, not out."
+  },
+  {
+   "id": "b17",
+   "text": "Feel the club arrive from inside the ball."
+  },
+  {
+   "id": "b18",
+   "text": "Many slices start at the top."
+  },
+  {
+   "id": "b19",
+   "text": "Start down under the glass."
+  }
+ ]
+}

@@ -1,0 +1,82 @@
+{
+ "voice": "am_michael",
+ "speed": 1.1,
+ "lines": [
+  {
+   "id": "b01",
+   "text": "Moving your feet isn't always a fault."
+  },
+  {
+   "id": "b02",
+   "text": "Losing your balance is."
+  },
+  {
+   "id": "b03",
+   "text": "You swing hard and your feet move."
+  },
+  {
+   "id": "b04",
+   "text": "So you try to glue them to the ground."
+  },
+  {
+   "id": "b05",
+   "text": "Now you're stiff, and still off balance."
+  },
+  {
+   "id": "b06",
+   "text": "The problem is where your weight ends up."
+  },
+  {
+   "id": "b07",
+   "text": "Stuck on your back foot, or tipping toward the ball."
+  },
+  {
+   "id": "b08",
+   "text": "A wobbly finish is the clue."
+  },
+  {
+   "id": "b09",
+   "text": "Scottie Scheffler's feet move a lot."
+  },
+  {
+   "id": "b10",
+   "text": "His trail foot slides through the shot."
+  },
+  {
+   "id": "b11",
+   "text": "Coaches tie it to how hard he pushes into the ground."
+  },
+  {
+   "id": "b12",
+   "text": "That slide is his. You don't need to copy it."
+  },
+  {
+   "id": "b13",
+   "text": "Balance is easy to check, the app I'm building puts your filmed swing next to the checkpoint, so here's the test."
+  },
+  {
+   "id": "b14",
+   "text": "Swing at three-quarter speed."
+  },
+  {
+   "id": "b15",
+   "text": "Finish tall, weight on your lead foot."
+  },
+  {
+   "id": "b16",
+   "text": "Now hold it for three seconds."
+  },
+  {
+   "id": "b17",
+   "text": "Can't hold it? Slow down until you can."
+  },
+  {
+   "id": "b18",
+   "text": "Let your feet move."
+  },
+  {
+   "id": "b19",
+   "text": "Hold your finish."
+  }
+ ]
+}

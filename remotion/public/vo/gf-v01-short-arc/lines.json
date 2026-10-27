@@ -1,0 +1,78 @@
+{
+ "voice": "am_michael",
+ "speed": 1.1,
+ "lines": [
+  {
+   "id": "b01",
+   "text": "Short golfers can still hit it far."
+  },
+  {
+   "id": "b02",
+   "text": "A short arc costs you distance."
+  },
+  {
+   "id": "b03",
+   "text": "As the club goes back, your arms fold."
+  },
+  {
+   "id": "b04",
+   "text": "At the top, the club sits tight to your head."
+  },
+  {
+   "id": "b05",
+   "text": "So you swing harder to make up for it."
+  },
+  {
+   "id": "b06",
+   "text": "A small circle gives the clubhead less runway."
+  },
+  {
+   "id": "b07",
+   "text": "Less runway means less speed."
+  },
+  {
+   "id": "b08",
+   "text": "Swinging harder won't make the circle bigger."
+  },
+  {
+   "id": "b09",
+   "text": "Rory McIlroy is listed at five foot ten."
+  },
+  {
+   "id": "b10",
+   "text": "In 2023, he led the PGA Tour in driving distance."
+  },
+  {
+   "id": "b11",
+   "text": "Watch his arms. They stay long going back."
+  },
+  {
+   "id": "b12",
+   "text": "Wide on the way back. Wide on the way through."
+  },
+  {
+   "id": "b13",
+   "text": "Width is a feel you can train, the app I'm building opens each drill with a checkpoint like this, so here's yours."
+  },
+  {
+   "id": "b14",
+   "text": "Start the club low and wide away from the ball."
+  },
+  {
+   "id": "b15",
+   "text": "Keep your lead arm long, not locked."
+  },
+  {
+   "id": "b16",
+   "text": "Then let your arms extend after the ball."
+  },
+  {
+   "id": "b17",
+   "text": "You can't change your height."
+  },
+  {
+   "id": "b18",
+   "text": "You can change your arc."
+  }
+ ]
+}

@@ -11,7 +11,13 @@ const voice = process.env.VOICE ?? 'am_michael';
 const speed = Number(process.env.SPEED ?? 1.1);
 
 for (const id of ids) {
-  const script = JSON.parse(fs.readFileSync(path.join(root, 'studio/scripts', id + '.json'), 'utf8'));
+  let src = path.join(root, 'studio/scripts', id + '.json');
+  if (!fs.existsSync(src)) {
+    const v = fs.readdirSync(path.join(root, 'studio/verticals')).map((d) => path.join(root, 'studio/verticals', d, 'scripts', id + '.json')).find((f) => fs.existsSync(f));
+    if (!v) throw new Error('script not found: ' + id);
+    src = v;
+  }
+  const script = JSON.parse(fs.readFileSync(src, 'utf8'));
   const outDir = path.join(root, 'remotion/public/vo', id);
   fs.mkdirSync(outDir, {recursive: true});
   const lines = script.beats.map((b) => ({id: b.id, text: b.vo.replace(/\*/g, '').replace(/ — /g, ', ')}));

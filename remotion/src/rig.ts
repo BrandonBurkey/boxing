@@ -10,9 +10,10 @@ export type Pose = {
   hdx: number; hdy: number; // head offset
   lgx: number; lgy: number; // lead glove target, relative to shoulder
   rgx: number; rgy: number; // rear glove target, relative to shoulder
+  club: number; // held-club angle in degrees: 0 forward, 90 down, 180 back, -90 up (used only by golf props)
 };
 
-export const POSES: Record<string, Pose> = {
+const RAW_POSES: Record<string, Omit<Pose, 'club'> & {club?: number}> = {
   guard: {fx: 0.17, bx: -0.17, fl: 0, bl: 0, hx: -0.01, hy: 0.465, lean: 9, shrug: 0, hdx: 0.0, hdy: 0, lgx: 0.17, lgy: 0.05, rgx: 0.1, rgy: 0.065},
   jab: {fx: 0.19, bx: -0.16, fl: 0, bl: 0, hx: 0.02, hy: 0.46, lean: 14, shrug: 0, hdx: 0.0, hdy: -0.005, lgx: 0.6, lgy: 0.06, rgx: 0.1, rgy: 0.07},
   cross: {fx: 0.19, bx: -0.15, fl: 0, bl: 0.012, hx: 0.04, hy: 0.455, lean: 18, shrug: 0, hdx: 0.0, hdy: -0.01, lgx: 0.12, lgy: 0.06, rgx: 0.6, rgy: 0.06},
@@ -29,7 +30,23 @@ export const POSES: Record<string, Pose> = {
   tired: {fx: 0.17, bx: -0.18, fl: 0, bl: 0, hx: -0.01, hy: 0.45, lean: 17, shrug: 0, hdx: 0.01, hdy: -0.02, lgx: 0.15, lgy: -0.1, rgx: 0.09, rgy: -0.08},
   relaxed: {fx: 0.17, bx: -0.17, fl: 0, bl: 0, hx: -0.01, hy: 0.46, lean: 7, shrug: 0, hdx: 0, hdy: 0, lgx: 0.16, lgy: 0.035, rgx: 0.1, rgy: 0.05},
   stance: {fx: 0.15, bx: -0.15, fl: 0, bl: 0, hx: 0.0, hy: 0.475, lean: 5, shrug: 0, hdx: 0, hdy: 0, lgx: 0.15, lgy: 0.04, rgx: 0.09, rgy: 0.06},
+  // ---- golf, down-the-line view (golfer faces the ball, to the right) ----
+  address: {fx: 0.04, bx: 0.0, fl: 0, bl: 0, hx: -0.08, hy: 0.5, lean: 40, shrug: 0, hdx: 0.01, hdy: 0, lgx: 0.14, lgy: -0.3, rgx: 0.15, rgy: -0.28, club: 60},
+  takeaway: {fx: 0.04, bx: 0.0, fl: 0, bl: 0, hx: -0.08, hy: 0.5, lean: 39, shrug: 0, hdx: 0.01, hdy: 0, lgx: 0.07, lgy: -0.28, rgx: 0.08, rgy: -0.26, club: 158},
+  halfBack: {fx: 0.04, bx: 0.0, fl: 0, bl: 0, hx: -0.085, hy: 0.5, lean: 38, shrug: 0, hdx: 0.01, hdy: 0, lgx: -0.03, lgy: -0.19, rgx: -0.02, rgy: -0.17, club: 182},
+  top: {fx: 0.04, bx: 0.0, fl: 0.004, bl: 0, hx: -0.085, hy: 0.5, lean: 36, shrug: 0, hdx: 0.01, hdy: 0, lgx: -0.04, lgy: 0.12, rgx: -0.03, rgy: 0.14, club: 200},
+  wideTop: {fx: 0.04, bx: 0.0, fl: 0.004, bl: 0, hx: -0.085, hy: 0.5, lean: 36, shrug: 0, hdx: 0.01, hdy: 0, lgx: -0.12, lgy: 0.16, rgx: -0.11, rgy: 0.18, club: 196},
+  shortTop: {fx: 0.04, bx: 0.0, fl: 0.004, bl: 0, hx: -0.085, hy: 0.5, lean: 36, shrug: 0.3, hdx: 0.01, hdy: 0, lgx: 0.04, lgy: 0.05, rgx: 0.05, rgy: 0.07, club: 235},
+  transition: {fx: 0.04, bx: 0.0, fl: 0, bl: 0, hx: -0.075, hy: 0.5, lean: 37, shrug: 0, hdx: 0.01, hdy: 0, lgx: -0.03, lgy: 0.0, rgx: -0.02, rgy: 0.02, club: 168},
+  overTop: {fx: 0.04, bx: 0.0, fl: 0, bl: 0, hx: -0.07, hy: 0.5, lean: 33, shrug: 0, hdx: 0.01, hdy: 0, lgx: 0.19, lgy: -0.04, rgx: 0.2, rgy: -0.02, club: 242},
+  impact: {fx: 0.04, bx: 0.0, fl: 0, bl: 0.012, hx: -0.065, hy: 0.5, lean: 37, shrug: 0, hdx: 0.0, hdy: 0, lgx: 0.15, lgy: -0.29, rgx: 0.16, rgy: -0.27, club: 62},
+  earlyExt: {fx: 0.04, bx: 0.0, fl: 0, bl: 0.02, hx: 0.01, hy: 0.54, lean: 24, shrug: 0, hdx: 0.0, hdy: 0, lgx: 0.13, lgy: -0.32, rgx: 0.14, rgy: -0.3, club: 60},
+  through: {fx: 0.04, bx: 0.0, fl: 0, bl: 0.03, hx: -0.05, hy: 0.51, lean: 30, shrug: 0, hdx: 0.0, hdy: 0, lgx: 0.25, lgy: -0.12, rgx: 0.25, rgy: -0.1, club: 0},
+  finish: {fx: 0.04, bx: -0.01, fl: 0, bl: 0.06, hx: -0.01, hy: 0.57, lean: 3, shrug: 0, hdx: 0.0, hdy: 0, lgx: -0.06, lgy: 0.12, rgx: -0.05, rgy: 0.14, club: -165},
+  offBalance: {fx: 0.12, bx: -0.02, fl: 0.04, bl: 0.05, hx: -0.07, hy: 0.55, lean: -12, shrug: 0, hdx: -0.02, hdy: 0, lgx: -0.02, lgy: 0.1, rgx: -0.01, rgy: 0.12, club: -140},
 };
+
+export const POSES: Record<string, Pose> = Object.fromEntries(Object.entries(RAW_POSES).map(([k, p]) => [k, {club: 54, ...p} as Pose]));
 
 export const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
 
