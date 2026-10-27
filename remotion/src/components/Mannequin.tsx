@@ -31,6 +31,7 @@ export type MannequinProps = {
   tension?: number; // 0..1 red glow on shoulders/arms
   opacity?: number;
   floorY?: number;
+  hands?: 'gloves' | 'hands';
 };
 
 export const toWorld = (bx: number, h: number, dir: number, floorY = FLOOR_Y) => (p: P): P => ({
@@ -38,7 +39,7 @@ export const toWorld = (bx: number, h: number, dir: number, floorY = FLOOR_Y) =>
   y: floorY - p.y * h,
 });
 
-export const Mannequin: React.FC<MannequinProps> = ({pose, baseX, heightPx: Hp, dir, palette, nearSide, reach = 1, tension = 0, opacity = 1, floorY = FLOOR_Y}) => {
+export const Mannequin: React.FC<MannequinProps> = ({pose, baseX, heightPx: Hp, dir, palette, nearSide, reach = 1, tension = 0, opacity = 1, floorY = FLOOR_Y, hands = 'gloves'}) => {
   const s = solve(pose, reach);
   const w = toWorld(baseX, Hp, dir, floorY);
   const r = (u: number) => u * Hp;
@@ -78,11 +79,15 @@ export const Mannequin: React.FC<MannequinProps> = ({pose, baseX, heightPx: Hp, 
         {limb(A.sh, A.el, 0.036, 0.03, body, k + 'u')}
         {limb(A.el, A.wr, 0.03, 0.025, body, k + 'f')}
         {joint(A.el, 0.026, jt, k + 'ej')}
+        {hands === 'hands' ? (
+          <circle cx={wr.x + Math.cos(ang) * gr * 0.45} cy={wr.y + Math.sin(ang) * gr * 0.45} r={gr * 0.52} fill={near ? palette.joint : palette.far} />
+        ) : (
         <g transform={`translate(${g.x},${g.y}) rotate(${(ang * 180) / Math.PI})`}>
           <rect x={-gr * 1.05} y={-gr * 0.92} width={gr * 2.05} height={gr * 1.84} rx={gr * 0.9} fill={near ? palette.glove : palette.gloveFar} />
           <rect x={-gr * 0.2} y={gr * 0.42 * (dir === 1 ? 1 : -1) - gr * 0.17} width={gr * 0.95} height={gr * 0.34} rx={gr * 0.17} fill="rgba(0,0,0,0.13)" />
           <rect x={-gr * 1.25} y={-gr * 0.55} width={gr * 0.4} height={gr * 1.1} rx={gr * 0.16} fill={near ? palette.glove : palette.gloveFar} />
         </g>
+        )}
       </g>
     );
   };

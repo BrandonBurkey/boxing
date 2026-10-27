@@ -6,14 +6,26 @@ import {Background, Floor} from './components/Stage';
 import {Mannequin} from './components/Mannequin';
 import {ChapterTag, Headline} from './components/Text';
 import {ImpactFx, ScreenOverlay, TopView, WorldOverlay} from './components/Overlays';
+import {PROP_TOP_TYPES, PROP_WORLD_TYPES, PropTop, PropWorld} from './sports/props';
 
 // Stage is authored at 1x and shown larger so figures fill the frame like a close shot.
 const STAGE_SCALE = 1.15;
 
 export type VideoData = {script: Script; vo: Record<string, string>; sfx: string[]};
 
-const WORLD_TYPES = new Set(['height', 'name', 'marker', 'gap', 'zone', 'vision', 'float', 'target']);
-const TOP_TYPES = new Set(['ring', 'band', 'path', 'line']);
+const WORLD_TYPES = new Set(['height', 'name', 'marker', 'gap', 'zone', 'vision', 'float', 'target', ...PROP_WORLD_TYPES]);
+const TOP_TYPES = new Set(['ring', 'band', 'path', 'line', ...PROP_TOP_TYPES]);
+const PROP_W = new Set(PROP_WORLD_TYPES);
+const PROP_T = new Set(PROP_TOP_TYPES);
+
+// Per-script accent colour (sport verticals). Boxing keeps the default.
+const DEFAULT_ACCENT = {accent: theme.accent, accentDim: theme.accentDim, glove: theme.you.glove, gloveFar: theme.you.gloveFar};
+const applyAccent = (accent?: string, accentDim?: string) => {
+  theme.accent = accent ?? DEFAULT_ACCENT.accent;
+  theme.accentDim = accentDim ?? (accent ? accent : DEFAULT_ACCENT.accentDim);
+  theme.you.glove = accent ?? DEFAULT_ACCENT.glove;
+  theme.you.gloveFar = accentDim ?? (accent ? accent : DEFAULT_ACCENT.gloveFar);
+};
 
 const useFonts = () => {
   const [handle] = useState(() => delayRender('fonts'));
@@ -34,6 +46,7 @@ const SideStage: React.FC<{c: Compiled; t: number}> = ({c, t}) => {
   return (
     <g>
       <Floor />
+      {overlays.filter((o) => o.type === 'prop').map((o, i) => <PropWorld key={'p' + i} o={o} c={c} t={t} />)}
       {overlays.filter((o) => o.type === 'zone').map((o, i) => <WorldOverlay key={'z' + i} o={o} c={c} t={t} />)}
       {ids.map((id, i) => {
         const a = c.actors[id];
@@ -50,10 +63,13 @@ const SideStage: React.FC<{c: Compiled; t: number}> = ({c, t}) => {
             reach={a.reach}
             tension={st.tension}
             opacity={st.opacity}
+            hands={a.hands}
           />
         );
       })}
-      {overlays.filter((o) => o.type !== 'zone').map((o, i) => <WorldOverlay key={'w' + i} o={o} c={c} t={t} />)}
+      {overlays.filter((o) => o.type === 'held').map((o, i) => <PropWorld key={'h' + i} o={o} c={c} t={t} />)}
+      {overlays.filter((o) => o.type !== 'zone' && !PROP_W.has(o.type)).map((o, i) => <WorldOverlay key={'w' + i} o={o} c={c} t={t} />)}
+      {overlays.filter((o) => o.type === 'ball' || o.type === 'arrow').map((o, i) => <PropWorld key={'b' + i} o={o} c={c} t={t} />)}
       {c.impacts.map((im, i) => {
         const age = t - im.t;
         if (age < 0 || age > 0.6) return null;
@@ -69,6 +85,7 @@ const SideStage: React.FC<{c: Compiled; t: number}> = ({c, t}) => {
 
 export const Video: React.FC<{data: VideoData}> = ({data}) => {
   useFonts();
+  applyAccent(data.script.accent, data.script.accentDim);
   const frame = useCurrentFrame();
   const t = frame / FPS;
   const c = useMemo(() => compile(data.script), [data]);
@@ -128,7 +145,9 @@ export const Video: React.FC<{data: VideoData}> = ({data}) => {
           )}
           {showTop && (
             <g opacity={topOpacity} transform={`translate(540,1000) scale(${bt.view === 'top' ? 1.1 - 0.1 * tk : 1}) translate(-540,-1000)`}>
-              <TopView c={c} t={t} overlays={topOverlays} scale={data.script.topScale ?? 1} />
+              {topOverlays.filter((o) => o.type === 'pitch').map((o, i) => <PropTop key={'tp' + i} o={o} t={t} />)}
+              <TopView c={c} t={t} overlays={topOverlays.filter((o) => !PROP_T.has(o.type))} scale={data.script.topScale ?? 1} />
+              {topOverlays.filter((o) => o.type === 'player' || o.type === 'tball').map((o, i) => <PropTop key={'tb' + i} o={o} t={t} />)}
             </g>
           )}
         </g>

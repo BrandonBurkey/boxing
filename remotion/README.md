@@ -23,6 +23,19 @@ Renders a video in our house style from a JSON script. Output is 1080x1920 at 30
   - Top view only: band, ring, path, line
 - **Other beat fields:** `impacts`, `cam`, `sfx`, `view: "side"|"top"`, `slam`, `stack`, `accent`, `size`, `pad`.
 
+## Sport props (`src/sports/props.tsx`)
+- **Side view:**
+  - `ball` (`kind`: basketball, football, tennis, cricket, rugby, american, golf; `legs`: `[{at, dur, from, to, arc}]`)
+  - `prop` (`kind`: hoop, goal, net, stumps, cone, line)
+  - `held` (`actor`, `hand`, `kind`: racket, bat, club, stick; `angle`, `len`)
+  - `arrow` (`points`, `label`, `dashed`)
+- **Top view:**
+  - `pitch` (`rects`, `lines`, `circles`, `arcs`)
+  - `player` (extra dots, static or with `legs`)
+  - `tball`
+- **Script-level options:** `accent` / `accentDim` change the brand colour. Actor `"hands": "hands"` swaps boxing gloves for bare hands.
+- `props-test` is a smoke-test composition. Boxing output was checked byte-identical after adding props.
+
 ## Look
 Palette and fonts are in `src/theme.ts`. Change the accent there when the brand is picked.
 The figures are drawn procedurally: two-bone IK for arms and legs, tapered capsules, joint caps.

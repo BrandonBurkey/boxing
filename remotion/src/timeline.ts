@@ -30,6 +30,8 @@ export type ActorDef = {
   dir: 1 | -1;
   nearSide: 'lead' | 'rear';
   reach?: number;
+  hands?: 'gloves' | 'hands';
+  hidden?: boolean;
   pose?: string;
   top?: {x: number; y: number; a: number};
 };
@@ -67,6 +69,9 @@ export type Script = {
   beats: Beat[];
   endHold?: number;
   topScale?: number;
+  accent?: string;
+  accentDim?: string;
+  sport?: string;
 };
 
 export type Ease = 'inout' | 'out' | 'in' | 'linear' | 'snap' | 'back';

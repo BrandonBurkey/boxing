@@ -5,8 +5,9 @@ import {FPS} from './timeline';
 import v01 from './data/v01-middle-distance.json';
 import v02 from './data/v02-stop-leaking-gas.json';
 import v03 from './data/v03-eyes-open.json';
+import ptest from './data/props-test.json';
 
-const videos = [v01, v02, v03] as unknown as VideoData[];
+const videos = [v01, v02, v03, ptest] as unknown as VideoData[];
 
 export const RemotionRoot: React.FC = () => (
   <>
